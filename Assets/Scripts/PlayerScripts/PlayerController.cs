@@ -8,6 +8,8 @@ public class PlayerController : EntityController
     private PlayerState state;
 
     public ArcRenderer arcRenderer;
+
+    public CameraController cameraController;
     [HideInInspector]
     public float iHorz;
     [HideInInspector]
@@ -18,7 +20,9 @@ public class PlayerController : EntityController
     public bool iArcPressed;
     public float ARCSQUATFORCE;
 
-    public float FALLMULTIPLIER;
+    public float NORMALFALLMULTIPLIER;
+    [HideInInspector]
+    public float currentFallMultiplier;
     public float MAXARCDURATION;
     public float GPSPEED;
     [HideInInspector]
@@ -83,6 +87,7 @@ public class PlayerController : EntityController
 
     public void OnGroundPoundPressed(InputAction.CallbackContext context)
     {
+        currentFallMultiplier = NORMALFALLMULTIPLIER * 10;
         iGroundPoundPressed = true;
         HandleInput();
         iGroundPoundPressed = false;

@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public GameObject player;
     public GameObject fort;
-    private Camera cam;
+    public Camera cam;
     private float velocity = 0f;
     //Zoom variables
     private int zoomState = 0;
@@ -17,23 +17,24 @@ public class CameraController : MonoBehaviour
     private float shakeIntensity = 0f;
     private float shakeDuration = 0f;
     Vector3 originalPosition;
-    public Transform camTransform;
+    private Transform camTransform;
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
+        camTransform = cam.transform;
         if (camTransform == null)
-		{
-			camTransform = GetComponent(typeof(Transform)) as Transform;
-		}
+        {
+            camTransform = GetComponent(typeof(Transform)) as Transform;
+        }
         originalPosition = camTransform.localPosition;
-        Zoom(-5f, 10f);
-        Shake(0.1f, 5f);
+        // Zoom(-5f, 10f);
+        // Shake(0.1f, 5f);
 
     }
 
-    void Shake(float intensity, float setDuration)
+    public void Shake(float intensity, float setDuration)
     {
+        Debug.Log("Shake");
         shakeState = 1;
         shakeIntensity = intensity;
         shakeDuration = setDuration;
@@ -47,17 +48,18 @@ public class CameraController : MonoBehaviour
             camTransform.localPosition = originalPosition + Random.insideUnitSphere * shakeIntensity;
             shakeDuration -= Time.deltaTime;
         }
-        else {
+        else
+        {
             shakeState = 0;
-            //camTransform.localPosition = originalPosition;
+            camTransform.localPosition = originalPosition;
         }
     }
 
-    void Zoom(float zoomDelta, float setDuration)
+    public void Zoom(float zoomDelta, float setDuration)
     {
         zoomState = 1;
         zoomInput = cam.transform.position.z + zoomDelta;
-        zoomDuration =  setDuration;
+        zoomDuration = setDuration;
     }
 
     void ZoomChange()

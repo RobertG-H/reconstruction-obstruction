@@ -15,6 +15,8 @@ public class FallingState : AerialState
         Debug.Log("Falling");
         if (p.RayCastGround())
         {
+            p.cameraController.Shake(0.9f, 0.4f);
+            p.currentFallMultiplier = p.NORMALFALLMULTIPLIER;
             if (Mathf.Abs(p.iHorz) > 0)
             {
                 return new WalkingState();
@@ -26,7 +28,8 @@ public class FallingState : AerialState
         }
         else
         {
-            p.body.velocity += Vector2.up * Physics2D.gravity.y * p.FALLMULTIPLIER * Time.deltaTime;
+            p.body.velocity += Vector2.up * Physics2D.gravity.y * p.currentFallMultiplier * Time.deltaTime;
+            Debug.Log(string.Format("current fall: {0}", p.currentFallMultiplier));
         }
         return base.Update(p);
     }

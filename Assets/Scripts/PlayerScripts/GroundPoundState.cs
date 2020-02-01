@@ -18,6 +18,7 @@ public class GroundPoundState : FallingState
             entered = false;
             p.body.velocity = new Vector3(0, p.GPSPEED, 0);
         }
+        p.body.velocity += new Vector2(0, p.GPSPEED * Time.deltaTime);
         return base.Update(p);
     }
 }
