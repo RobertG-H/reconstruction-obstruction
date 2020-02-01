@@ -12,20 +12,19 @@ public class ArcJumpState : AerialState
     // private float totalTime = 2 * vertSpeed / g; // total time of projectile 
 
     private bool entered = true;
-    private float vSpeed = 10; 
-    private float hSpeed = 10;
+    private float vSpeed;
+    private float hSpeed;
 
-    public ArcJumpState(PlayerController p, float iArcPressDuration, float iHorz)
+    public ArcJumpState(PlayerController p, float addedArcforce)
     {
-        Debug.Log(iArcPressDuration); 
-        vSpeed = vSpeed * Mathf.Min(iArcPressDuration, 3.0f);
+        vSpeed = p.ARCFORCEY * addedArcforce;
         if (!p.isFacingRight)
         {
-            hSpeed = -1 * hSpeed * Mathf.Min(iArcPressDuration, 3.0f);
+            hSpeed = -1 * p.ARCFORCEX * addedArcforce;
         }
         else
         {
-            hSpeed = hSpeed * Mathf.Min(iArcPressDuration, 3.0f);
+            hSpeed = p.ARCFORCEX * addedArcforce;
         }
     }
 
@@ -44,8 +43,8 @@ public class ArcJumpState : AerialState
         if (entered)
         {
             entered = false;
-
-            p.body.velocity = new Vector3(hSpeed, vSpeed, 0); 
+            // Debug.Log(string.Format("ArcJump... vspeed: {0}, hspeed: {1}", vSpeed, hSpeed));
+            p.body.velocity = new Vector3(hSpeed, vSpeed, 0);
         }
 
         return base.Update(p);

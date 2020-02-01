@@ -24,7 +24,10 @@ public class FallingState : AerialState
                 return new IdleState();
             }
         }
-
+        else
+        {
+            p.body.velocity += Vector2.up * Physics2D.gravity.y * p.FALLMULTIPLIER * Time.deltaTime;
+        }
         return base.Update(p);
     }
 

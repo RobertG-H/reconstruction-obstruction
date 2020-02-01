@@ -6,17 +6,25 @@ using UnityEngine.InputSystem;
 public class PlayerController : EntityController
 {
     private PlayerState state;
+
+    public ArcRenderer arcRenderer;
+    [HideInInspector]
     public float iHorz;
-    public bool iJumpReleased; 
-    public float JUMPSQUATFORCE;
+    [HideInInspector]
+    public bool iGroundPoundPressed;
+    [HideInInspector]
     public bool iArcReleased;
-    public float ARCSQUATFORCE; 
+    [HideInInspector]
+    public bool iArcPressed;
+    public float ARCSQUATFORCE;
 
-    public float MAXJUMPDURATION;
-    public float MAXARCDURATION; 
+    public float FALLMULTIPLIER;
+    public float MAXARCDURATION;
+    public float GPSPEED;
+    [HideInInspector]
+    public float iArcPressDuration;
 
-    public float iJumpPressDuration;
-    public float iArcPressDuration; 
+    private bool arcCancelled = false;
 
     // Start is called before the first frame update
     public override void Start()
@@ -34,6 +42,12 @@ public class PlayerController : EntityController
         //             break;
         //     }
         // }
+
+        arcRenderer.vSpeedFrameDelta = ARCSQUATFORCE * ARCFORCEY;
+        arcRenderer.hSpeedFrameDelta = ARCSQUATFORCE * ARCFORCEX;
+        arcRenderer.MAXVSPEED = ARCSQUATFORCE * ARCFORCEY * MAXARCDURATION;
+        arcRenderer.MAXHSPEED = ARCSQUATFORCE * ARCFORCEX * MAXARCDURATION;
+
         base.Start();
     }
     void Update()
@@ -67,32 +81,40 @@ public class PlayerController : EntityController
         HandleInput();
     }
 
-    public void OnJumpPressed(InputAction.CallbackContext context)
+    public void OnGroundPoundPressed(InputAction.CallbackContext context)
     {
-        return; 
-        // First press
-        if (!context.started)
-        {
-            iJumpReleased = true;
-            iJumpPressDuration = Mathf.Min((float)context.duration, MAXJUMPDURATION);
-            HandleInput();
-            iJumpReleased = false;
-        }
-
+        iGroundPoundPressed = true;
+        HandleInput();
+        iGroundPoundPressed = false;
     }
 
     public void OnArcPressed(InputAction.CallbackContext context)
     {
-        if (!context.started)
+        Debug.Log("Arc pressed");
+        if (context.started)
         {
-            Debug.Log("Second");
+            currentMaxSpeedX /= 2.5f;
+            arcRenderer.isCharging = true;
+            iArcPressed = true;
+            HandleInput();
+            iArcPressed = false;
+            arcCancelled = false;
+        }
+        else if (!arcCancelled)
+        {
+            currentMaxSpeedX = ABSMAXSPEEDX;
+            arcRenderer.isCharging = false;
             iArcReleased = true;
-            iArcPressDuration = Mathf.Min((float)context.duration, MAXARCDURATION); // increase duration 
+            iArcPressDuration = Mathf.Min((float)context.duration, MAXARCDURATION);
             HandleInput();
             iArcReleased = false;
         }
-        else
-            Debug.Log("First");
 
+    }
+
+    public void OnCancelArcPressed(InputAction.CallbackContext context)
+    {
+        arcRenderer.isCharging = false;
+        arcCancelled = true;
     }
 }
