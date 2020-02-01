@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194231}
   - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
@@ -304,11 +305,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d41cb45b7dbbd46857699a84a5a5ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 7427bb4a2e32eda4aa481671d18839a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTransform: {fileID: 963194228}
+  shakeDuration: 0
+  shakeAmount: 0.7
+  decreaseFactor: 1
+  originalPos: {x: 0, y: 0, z: 0}
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a3e90c030ed8540bf908a3a0088cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1112017667}
   fort: {fileID: 0}
+  camTransform: {fileID: 0}
 --- !u!1 &1112017667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2098484562075067359, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
