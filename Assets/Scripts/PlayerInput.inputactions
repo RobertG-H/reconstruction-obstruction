@@ -20,6 +20,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold(duration=0.1,pressPoint=0.5)"
+                },
+                {
+                    "name": "ArcPressed",
+                    "type": "Button",
+                    "id": "b96e3b9e-ae22-4fa0-b5cf-ddc08e83f071",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Hold(duration=1,pressPoint=0.5)"
                 }
             ],
             "bindings": [
@@ -86,6 +94,17 @@
                     "processors": "",
                     "groups": "Keyboard WASD",
                     "action": "JumpPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91a5b5fd-7a2d-4a71-bd03-edd8396b856b",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard WASD",
+                    "action": "ArcPressed",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

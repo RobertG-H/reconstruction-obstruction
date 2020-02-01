@@ -16,6 +16,7 @@ public abstract class EntityController : MonoBehaviour
     public float SLOWDOWNTHRES = 2;
 	public float MAXSPEEDX = 10;
     public float JUMPFORCE  = 350;
+    public float ARCFORCE = 5; // scale value to adjust height of jump 
     public float RAYCASTDOWNDIST = 0.8f;
 
     public bool isFacingRight = false;
