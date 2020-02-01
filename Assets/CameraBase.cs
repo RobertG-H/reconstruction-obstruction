@@ -9,23 +9,35 @@ public class CameraBase : MonoBehaviour
     private Camera cam;
     private float velocity = 0f;
     private int zoomState = 0;
+    private float zoomInput = 0f;
+    private float duration = 0f;
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;       
         zoomState = 0;
-        Debug.Log(cam.transform.position.z);
+        ZoomStart(-5f, 1);
     }
 
-    void Zoom(int dir, float zoomInput, float duration)
+    void ZoomStart(float zoomDelta, float setDuration)
     {
-        zoomInput = zoomInput * dir;
+        zoomState = 1;
+        zoomInput = cam.transform.position.z + zoomDelta;
+        duration =  setDuration;
+    }
+
+    void Zoom()
+    {
         if (Mathf.Abs(zoomInput - cam.transform.position.z) > 0.01f)
         {
             float newSize = Mathf.SmoothDamp(cam.transform.position.z, zoomInput, ref velocity, duration);
             float CamX = cam.transform.position.x;
             float CamY = transform.position.y;
             cam.transform.position = new Vector3(CamX, CamY, newSize);
+        }
+        else
+        {
+            zoomState = 0;
         }
     }
 
@@ -34,7 +46,9 @@ public class CameraBase : MonoBehaviour
     {
         //Set update zoom level based on current trajectory of the hammer
         //Zoom(player.)
-        ZoomOut(-1, 15f, 1f);
-        Debug.Log(cam.transform.position.z);
+        if (zoomState == 1)
+        {
+            Zoom();
+        }
     }
 }
