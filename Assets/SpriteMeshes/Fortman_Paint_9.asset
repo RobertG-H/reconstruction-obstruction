@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &-2786172985314775393
+Mesh:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Fortman_Paint_9
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 24
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 10
+    localAABB:
+      m_Center: {x: 0.010586023, y: 0.011047363, z: 0}
+      m_Extent: {x: 3.725586, y: 2.196045, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 020001000000000001000300030001000400010005000400040005000600060005000700070005000800090008000500
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 10
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 1
+      offset: 0
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 2
+      offset: 0
+      format: 0
+      dimension: 4
+    - stream: 2
+      offset: 16
+      format: 10
+      dimension: 4
+    m_DataSize: 800
+    _typelessdata: 71354d4000a42f3f000000000000000000000000000080bf0000803f0000000000000000000080bf711d6f4000d70bc0000000000000000000000000000080bf0000803f0000000000000000000080bf711d6f4000b88abe000000000000000000000000000080bf0000803f0000000000000000000080bfe1bab43f00410d40000000000000000000000000000080bf0000803f0000000000000000000080bf8f0a08c000410d40000000000000000000000000000080bf0000803f0000000000000000000080bf8f4a22c000d70bc0000000000000000000000000000080bf0000803f5f91782100000000000080bf8f4a45c00022f33f000000000000000000000000000080bf0000803f0000000000000000000080bf945251c000a2e13f000000000000000000000000000080bf0000803f0000000000000000000080bf8fc26dc000e2b53f000000000000000000000000000080bf0000803f2304df2300000000000080bf8fc26dc00048d33e000000000000000000000000000080bf0000803fc1099c2500000000000080bf8ca16b3fcc0f333f37cc703fcc0f1e3f37cc703fcc0f2c3f8c215a3fcc2f3e3f8ca1373fcc2f3e3f8ca1333fcc0f1e3f374c2e3fccef3b3fe1762c3fccef3a3f8c21283fcc6f383f8c21283fcc0f313f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0.010586023, y: 0.011047363, z: 0}
+    m_Extent: {x: 3.725586, y: 2.196045, z: 0}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10c0be6d28fe4d539c4a39822fe301c, type: 3}
+  m_Name: Fortman_Paint_9
+  m_EditorClassIdentifier: 
+  m_ApiVersion: 4
+  m_Sprite: {fileID: -3487674569481431941, guid: 4abaef119c81380448f49ef0fe239c34,
+    type: 3}
+  m_SharedMesh: {fileID: -2786172985314775393}
+  m_SharedMaterials: []
+--- !u!114 &7112497877033575155
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e715ea371f114f4a8d2584ad476634d, type: 3}
+  m_Name: Fortman_Paint_9_Data
+  m_EditorClassIdentifier: 
+  m_PivotPoint: {x: 2095.5, y: 2379.4998}
+  m_Vertices:
+  - {x: 2416.1387, y: 2448.1094}
+  - {x: 2469.1172, y: 2161}
+  - {x: 2469.1172, y: 2352.4062}
+  - {x: 2236.6953, y: 2600.209}
+  - {x: 1882.9355, y: 2600.209}
+  - {x: 1841.9199, y: 2161}
+  - {x: 1787.2324, y: 2569.4473}
+  - {x: 1768.4335, y: 2555.7754}
+  - {x: 1724, y: 2521.5957}
+  - {x: 1724, y: 2420.7656}
+  m_BoneWeights: []
+  m_Edges:
+  - index1: 9
+    index2: 8
+  - index1: 7
+    index2: 8
+  - index1: 9
+    index2: 5
+  - index1: 6
+    index2: 7
+  - index1: 4
+    index2: 6
+  - index1: 3
+    index2: 4
+  - index1: 1
+    index2: 5
+  - index1: 0
+    index2: 3
+  - index1: 2
+    index2: 0
+  - index1: 2
+    index2: 1
+  m_Holes: []
+  m_Indices: 090000000800000005000000070000000500000008000000060000000500000007000000040000000500000006000000010000000500000004000000030000000100000004000000000000000100000003000000020000000100000000000000
+  m_BindPoses: []
+  m_Blendshapes: []

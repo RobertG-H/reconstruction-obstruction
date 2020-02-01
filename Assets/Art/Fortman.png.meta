@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: ee231ab4eddac5146bcc47622b13fe9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9191439416583403113
+    second: Fortman_0
+  - first:
+      213: 920042782791719312
+    second: Fortman_1
+  - first:
+      213: -1098286789030505837
+    second: Fortman_2
+  - first:
+      213: -1260048113903651094
+    second: Fortman_3
+  - first:
+      213: 4236691983678772822
+    second: Fortman_4
+  - first:
+      213: 1891098584311173064
+    second: Fortman_5
+  - first:
+      213: -5955237957575358335
+    second: Fortman_6
+  - first:
+      213: -6454232263537139510
+    second: Fortman_7
+  - first:
+      213: -4831460814993117440
+    second: Fortman_8
+  - first:
+      213: 8778441949066002497
+    second: Fortman_9
+  - first:
+      213: -4793418461447126092
+    second: Fortman_10
+  - first:
+      213: 6736029151741648723
+    second: Fortman_11
+  - first:
+      213: 8758491221615359241
+    second: Fortman_12
+  - first:
+      213: 7930256588112663260
+    second: Fortman_13
+  - first:
+      213: -4954536024233202520
+    second: Fortman_14
+  - first:
+      213: 6877985432010157703
+    second: Fortman_15
+  - first:
+      213: 107573128498919791
+    second: Fortman_16
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fortman_0
+      rect:
+        serializedVersion: 2
+        x: 93.99999
+        y: 3077
+        width: 286.85547
+        height: 172.35352
+      alignment: 9
+      pivot: {x: 0.49676585, y: 0.496072}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014b81df5b80c2e48aafaad6a90616f9
+      internalID: 9191439416583403113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_1
+      rect:
+        serializedVersion: 2
+        x: 490.00003
+        y: 2763
+        width: 409.90237
+        height: 563.71094
+      alignment: 9
+      pivot: {x: 0.4976794, y: 0.4984824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08dee4f40ea4fd640a63e2c01f698372
+      internalID: 920042782791719312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_2
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2816.9998
+        width: 438.95496
+        height: 515.8594
+      alignment: 9
+      pivot: {x: 0.4977732, y: 0.49916705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1bf3001367a2141bf81f4c1f7ce8ff
+      internalID: -1098286789030505837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_3
+      rect:
+        serializedVersion: 2
+        x: 1610.9999
+        y: 2834
+        width: 122.79297
+        height: 471.42578
+      alignment: 9
+      pivot: {x: 0.49269924, y: 0.49848783}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d003765b956ff3a448e543cf892d6030
+      internalID: -1260048113903651094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_4
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 2796
+        width: 218.49634
+        height: 505.60547
+      alignment: 9
+      pivot: {x: 0.49657583, y: 0.4974234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13521c1fc7b92a24db2ae4b7f0cafdb5
+      internalID: 4236691983678772822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_5
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 2891.418
+        width: 351.79663
+        height: 290.27344
+      alignment: 9
+      pivot: {x: 0.500289, y: 0.49119905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc7c31cb4fbc9e44bfa3b49fdc99419
+      internalID: 1891098584311173064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_6
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 2225
+        width: 484
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf51c648794bba449ba0e0bdf68ec22b
+      internalID: -5955237957575358335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_7
+      rect:
+        serializedVersion: 2
+        x: 80.99999
+        y: 2219
+        width: 497.0605
+        height: 351.79688
+      alignment: 9
+      pivot: {x: 0.49893326, y: 0.49744546}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ffa2baf67859146ae29771d9b9f287
+      internalID: -6454232263537139510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_8
+      rect:
+        serializedVersion: 2
+        x: 740.99994
+        y: 2165.0005
+        width: 700.4299
+        height: 495.35156
+      alignment: 9
+      pivot: {x: 0.4989794, y: 0.4976254}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e21821e205f6b44db6c010a8062ae3b
+      internalID: -4831460814993117440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_9
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 2171
+        width: 748.28125
+        height: 454.33594
+      alignment: 9
+      pivot: {x: 0.49847534, y: 0.49852976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4620b91b752de24ca7e9b636522bf56
+      internalID: 8778441949066002497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_10
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 1643
+        width: 260
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97af5e1e3335d6344b03ac97c07e4580
+      internalID: -4793418461447126092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1630
+        width: 264.63867
+        height: 384.26746
+      alignment: 9
+      pivot: {x: 0.49501458, y: 0.49704963}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac401daf20918764998eabf3423e7eed
+      internalID: 6736029151741648723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_12
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1965.9999
+        width: 208.24207
+        height: 177.48059
+      alignment: 9
+      pivot: {x: 0.4970177, y: 0.49582958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cc5577b678f22498c725d79177cea9
+      internalID: 8758491221615359241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1650
+        width: 254.38477
+        height: 392.81238
+      alignment: 9
+      pivot: {x: 0.4972782, y: 0.49769276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3c3a4c70f267a46a1df51c6d921f21
+      internalID: 7930256588112663260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_14
+      rect:
+        serializedVersion: 2
+        x: 736.99994
+        y: 1691
+        width: 334.7071
+        height: 281.72864
+      alignment: 9
+      pivot: {x: 0.49894372, y: 0.4969325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3589c4f80ef57948b401538bfcb0d89
+      internalID: -4954536024233202520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_15
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 1668
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd885ad4dbe14c3448c8ee2770be317d
+      internalID: 6877985432010157703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fortman_16
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 67
+        width: 1665
+        height: 1439
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db132243518fde6498bc7390e1933da9
+      internalID: 107573128498919791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 626594072ffcbbd4b93caa1f7cf1d4a2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

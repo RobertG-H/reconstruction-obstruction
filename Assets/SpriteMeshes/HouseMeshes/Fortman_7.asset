@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-428723682141924892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e715ea371f114f4a8d2584ad476634d, type: 3}
+  m_Name: Fortman_7_Data
+  m_EditorClassIdentifier: 
+  m_PivotPoint: {x: 329, y: 2393.9998}
+  m_Vertices:
+  - {x: 573.0605, y: 2531.6172}
+  - {x: 525.209, y: 2347.0469}
+  - {x: 573.0605, y: 2398.3164}
+  - {x: 463.68552, y: 2341.92}
+  - {x: 439.7597, y: 2565.7969}
+  - {x: 236.39061, y: 2458.1309}
+  - {x: 130.43358, y: 2565.7969}
+  - {x: 268.86133, y: 2365.8457}
+  - {x: 255.18944, y: 2224}
+  - {x: 320.13086, y: 2261.5977}
+  - {x: 85.99999, y: 2423.9512}
+  - {x: 85.99999, y: 2224}
+  m_BoneWeights: []
+  m_Edges:
+  - index1: 11
+    index2: 10
+  - index1: 6
+    index2: 10
+  - index1: 11
+    index2: 8
+  - index1: 3
+    index2: 5
+  - index1: 7
+    index2: 5
+  - index1: 9
+    index2: 7
+  - index1: 9
+    index2: 8
+  - index1: 6
+    index2: 4
+  - index1: 0
+    index2: 4
+  - index1: 2
+    index2: 0
+  - index1: 1
+    index2: 3
+  - index1: 2
+    index2: 1
+  m_Holes: []
+  m_Indices: 0b0000000a0000000800000006000000080000000a000000050000000800000006000000070000000800000005000000090000000800000007000000060000000400000005000000030000000500000004000000000000000300000004000000010000000300000000000000020000000100000000000000
+  m_BindPoses: []
+  m_Blendshapes: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10c0be6d28fe4d539c4a39822fe301c, type: 3}
+  m_Name: Fortman_7
+  m_EditorClassIdentifier: 
+  m_ApiVersion: 4
+  m_Sprite: {fileID: -6454232263537139510, guid: ee231ab4eddac5146bcc47622b13fe9d,
+    type: 3}
+  m_SharedMesh: {fileID: 6572839691871370350}
+  m_SharedMaterials: []
+--- !u!43 &6572839691871370350
+Mesh:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Fortman_7
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 30
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 12
+    localAABB:
+      m_Center: {x: 0.005302429, y: 0.008986831, z: 0}
+      m_Extent: {x: 2.4353025, y: 1.7089844, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 020001000000010003000000000003000400030005000400060004000500050008000600070008000500060008000a000900080007000b000a000800
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 12
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 1
+      offset: 0
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 2
+      offset: 0
+      format: 0
+      dimension: 4
+    - stream: 2
+      offset: 16
+      format: 10
+      dimension: 4
+    m_DataSize: 960
+    _typelessdata: df321c407b26b03f000000000000000000000000000080bf0000803ff28305a400000000000080bfc325fb3f1466f0be000000000000000000000000000080bf0000803fbeb9872300000000000080bfdf321c405ccf303d000000000000000000000000000080bf0000803f0000000000000000000080bfc065ac3f0a5305bf000000000000000000000000000080bf0000803f55645ca400000000000080bfbdc58d3f7be6db3f000000000000000000000000000080bf0000803fbaf656a400000000000080bf7d146dbff62c243f000000000000000000000000000080bf0000803fe23baea300000000000080bf3f2afebf7be6db3f000000000000000000000000000080bf0000803f76a9e82400000000000080bf7bf419bf142690be000000000000000000000000000080bf0000803f1119912300000000000080bf7df43cbf8599d9bf000000000000000000000000000080bf0000803fa906972400000000000080bfd7a3b5bd8579a9bf000000000000000000000000000080bf0000803fc0099c2400000000000080bf1f851bc0ec59993e000000000000000000000000000080bf0000803f9731692500000000000080bf1f851bc08599d9bf000000000000000000000000000080bf0000803f0000000000000000000080bf548c5f3e722b393fabe14c3e72ab2b3f548c5f3e726b2f3fabe1343e724b2b3f558c2b3e72ab3b3f016eb83d72cb333fac864b3d72ab3b3f57c3d13d720b2d3fac18c73d72ab223f57c3f93d726b253f5831063d724b313f5831063d72ab223f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0.005302429, y: 0.008986831, z: 0}
+    m_Extent: {x: 2.4353025, y: 1.7089844, z: 0}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
