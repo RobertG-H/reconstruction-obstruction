@@ -14,20 +14,28 @@
                     "interactions": ""
                 },
                 {
-                    "name": "JumpPressed",
-                    "type": "Button",
-                    "id": "b3e34124-e4c3-47c9-927c-9d1dfecc3d78",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Hold(duration=0.1,pressPoint=0.5)"
-                },
-                {
                     "name": "ArcPressed",
                     "type": "Button",
                     "id": "b96e3b9e-ae22-4fa0-b5cf-ddc08e83f071",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=5,pressPoint=0.5)"
+                },
+                {
+                    "name": "CancelArcPressed",
+                    "type": "Button",
+                    "id": "7a99eecf-0fb4-49d6-8ba0-28daa280e1a2",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Hold(duration=1,pressPoint=0.5)"
+                    "interactions": "Press"
+                },
+                {
+                    "name": "GroundPoundPressed",
+                    "type": "Button",
+                    "id": "d8e46036-2400-439f-8206-5dcbf42c60e7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -77,34 +85,67 @@
                 },
                 {
                     "name": "",
-                    "id": "601a9e76-1c7f-423a-b2df-ec917f04ac71",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "JumpPressed",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "56cc1748-8aeb-4e13-ba96-6fad6f015fed",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard WASD",
-                    "action": "JumpPressed",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "91a5b5fd-7a2d-4a71-bd03-edd8396b856b",
                     "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard WASD",
                     "action": "ArcPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37630be0-5e0e-4366-b062-759f2844d84a",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ArcPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f4f5ab2b-6d9e-4cfa-bc00-403c29dcaf43",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard WASD",
+                    "action": "CancelArcPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cbe39f1d-4d52-448d-9e46-eddb64092451",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "CancelArcPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a74f85e3-0018-4e77-a908-6327fa194f48",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "GroundPoundPressed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6eb5c292-96bd-4fd1-82bc-02801bbe606b",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard WASD",
+                    "action": "GroundPoundPressed",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

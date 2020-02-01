@@ -6,17 +6,22 @@ public abstract class EntityController : MonoBehaviour
 {
     [HideInInspector]
     public Rigidbody2D body;
-    
+
     [HideInInspector]
     public Animator anim;
 
     public float ACCELSLOWDOWN = 120;
     public float ACCELX = 50;
-	public float STOPTHRESH = 1;
+    public float STOPTHRESH = 1;
     public float SLOWDOWNTHRES = 2;
-	public float MAXSPEEDX = 10;
-    public float JUMPFORCE  = 350;
-    public float ARCFORCE = 5; // scale value to adjust height of jump 
+    public float ABSMAXSPEEDX = 10;
+    [HideInInspector]
+    public float currentMaxSpeedX;
+    public float AIRACCELX;
+    public float ARCFORCEX = 5;
+
+    public float ARCFORCEY = 10;
+
     public float RAYCASTDOWNDIST = 0.8f;
 
     public bool isFacingRight = false;
@@ -24,7 +29,7 @@ public abstract class EntityController : MonoBehaviour
 
     public virtual void Start()
     {
-
+        currentMaxSpeedX = ABSMAXSPEEDX;
     }
     public void Stop()
     {
@@ -33,7 +38,7 @@ public abstract class EntityController : MonoBehaviour
 
     public void CheckFlip(float horz)
     {
-        if((isFacingRight && horz < 0) || (!isFacingRight && horz > 0))
+        if ((isFacingRight && horz < 0) || (!isFacingRight && horz > 0))
         {
             Vector3 newScale = transform.localScale;
             newScale.x = -transform.localScale.x;
@@ -46,12 +51,12 @@ public abstract class EntityController : MonoBehaviour
     {
         Debug.LogWarning("EntityController: ResetStates() -> No animations implemented. Cannot reset states.");
         // foreach(AnimatorControllerParameter param in anim.parameters)
-		// {
-		// 	if(param.type == AnimatorControllerParameterType.Bool)
-		// 	{
-		// 		anim.SetBool(param.name, false);
-		// 	}
-		// }
+        // {
+        // 	if(param.type == AnimatorControllerParameterType.Bool)
+        // 	{
+        // 		anim.SetBool(param.name, false);
+        // 	}
+        // }
     }
     public bool RayCastGround()
     {
