@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10c0be6d28fe4d539c4a39822fe301c, type: 3}
+  m_Name: Fortman_Paint_14
+  m_EditorClassIdentifier: 
+  m_ApiVersion: 4
+  m_Sprite: {fileID: -563678932864547825, guid: 4abaef119c81380448f49ef0fe239c34,
+    type: 3}
+  m_SharedMesh: {fileID: 5016861606025545170}
+  m_SharedMaterials: []
+--- !u!43 &5016861606025545170
+Mesh:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Fortman_Paint_14
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 57
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 15
+    localAABB:
+      m_Center: {x: 0.01065433, y: 0.012743533, z: 0}
+      m_Extent: {x: 1.1706543, y: 1.1877434, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 02000100000001000300000000000300040003000500040000000b00020005000600040002000d00010001000d000300060007000400040007000800050003000e000c000b00000008000700090005000e00060002000b000d000a00090007000d000e0003000b0006000e000d000b000e00
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 15
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 1
+      offset: 0
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 2
+      offset: 0
+      format: 0
+      dimension: 4
+    - stream: 2
+      offset: 16
+      format: 10
+      dimension: 4
+    m_DataSize: 1216
+    _typelessdata: 1fe5873f1f13303f000000000000000000000000000080bf0000803f9886853200000000000080bf3d0a643fcd6c62bf000000000000000000000000000080bf0000803fb0fcb9b300000000000080bf3d6a683fcd8c6fbf000000000000000000000000000080bf0000803fabb719b300000000000080bf3dea563fcd6c62bf000000000000000000000000000080bf0000803f198e2a3300000000000080bf3d8a523f8fa9993f000000000000000000000000000080bf0000803fd41161b000000000000080bf3d2a4e3fcd2c6bbf000000000000000000000000000080bf0000803f22de02b400000000000080bf7b14f63e666696bf000000000000000000000000000080bf0000803f34fe51b200000000000080bfc3752ebf666696bf000000000000000000000000000080bf0000803fa9df8a3100000000000080bfc3154dbf8fa9993f000000000000000000000000000080bf0000803f53040a3000000000000080bfe17a94bf1f13533f000000000000000000000000000080bf0000803f1056de3200000000000080bfe17a94bf7b4c103e000000000000000000000000000080bf0000803f2077163500000000000080bf1f35973f661687bf000000000000000000000000000080bf0000803ffdc554b300000000000080bf1f35973ff698943d000000000000000000000000000080bf0000803fe524a4b500000000000080bf3daa5f3fcd4c78bf000000000000000000000000000080bf0000803f83c6803300000000000080bf3d8a523fcd4c78bf000000000000000000000000000080bf0000803fa572293300000000000080bf0000000000000000dde90d3f5e17063f323f0c3fbd2ef53edd690c3fbd6ef43e32bf0b3fbd2ef53e87940b3f5ed7093fdd690b3fbdaef43e323f083fbdeef03eb9d3f93ebdeef03e647ef73e5ed7093f647ef03e5e17073f647ef03e5e17023f87140f3fbdaef23e87140f3f5e97013f87140c3fbdeef33e87940b3fbdeef33e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0.01065433, y: 0.012743533, z: 0}
+    m_Extent: {x: 1.1706543, y: 1.1877434, z: 0}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
+--- !u!114 &8702399783156663709
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e715ea371f114f4a8d2584ad476634d, type: 3}
+  m_Name: Fortman_Paint_14_Data
+  m_EditorClassIdentifier: 
+  m_PivotPoint: {x: 1349, y: 1764.5}
+  m_Vertices:
+  - {x: 1455.168, y: 1833.2792}
+  - {x: 1438.0781, y: 1676.0527}
+  - {x: 1439.7871, y: 1670.9258}
+  - {x: 1432.9512, y: 1676.0527}
+  - {x: 1431.2422, y: 1884.5487}
+  - {x: 1429.5332, y: 1672.6348}
+  - {x: 1397.0625, y: 1647}
+  - {x: 1280.8516, y: 1647}
+  - {x: 1268.8887, y: 1884.5487}
+  - {x: 1233, y: 1846.951}
+  - {x: 1233, y: 1778.5917}
+  - {x: 1467.1309, y: 1658.9629}
+  - {x: 1467.1309, y: 1771.7557}
+  - {x: 1436.3691, y: 1667.5078}
+  - {x: 1431.2422, y: 1667.5078}
+  m_BoneWeights: []
+  m_Edges:
+  - index1: 10
+    index2: 9
+  - index1: 12
+    index2: 0
+  - index1: 11
+    index2: 6
+  - index1: 12
+    index2: 11
+  - index1: 8
+    index2: 9
+  - index1: 10
+    index2: 7
+  - index1: 4
+    index2: 8
+  - index1: 0
+    index2: 4
+  - index1: 6
+    index2: 7
+  m_Holes: []
+  m_Indices: 05000000030000000e0000000d0000000e00000003000000010000000d00000003000000020000000d00000001000000050000000e000000060000000b000000060000000e0000000d0000000b0000000e000000020000000b0000000d000000000000000b000000020000000c0000000b000000000000000a0000000900000007000000080000000700000009000000040000000700000008000000060000000700000004000000050000000600000004000000030000000500000004000000000000000300000004000000010000000300000000000000020000000100000000000000
+  m_BindPoses: []
+  m_Blendshapes: []
