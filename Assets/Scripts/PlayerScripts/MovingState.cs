@@ -30,7 +30,7 @@ public class MovingState : PlayerState
             }
             else
             {
-                p.Stop();
+                //p.Stop();
             }
         }
         return null;

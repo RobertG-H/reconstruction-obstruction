@@ -7,12 +7,16 @@ public class PlayerController : EntityController
 {
     private PlayerState state;
     public float iHorz;
-    public bool iJumpReleased;
+    public bool iJumpReleased; 
     public float JUMPSQUATFORCE;
+    public bool iArcReleased;
+    public float ARCSQUATFORCE; 
 
     public float MAXJUMPDURATION;
+    public float MAXARCDURATION; 
 
     public float iJumpPressDuration;
+    public float iArcPressDuration; 
 
     // Start is called before the first frame update
     public override void Start()
@@ -65,6 +69,7 @@ public class PlayerController : EntityController
 
     public void OnJumpPressed(InputAction.CallbackContext context)
     {
+        return; 
         // First press
         if (!context.started)
         {
@@ -73,6 +78,21 @@ public class PlayerController : EntityController
             HandleInput();
             iJumpReleased = false;
         }
+
+    }
+
+    public void OnArcPressed(InputAction.CallbackContext context)
+    {
+        if (!context.started)
+        {
+            Debug.Log("Second");
+            iArcReleased = true;
+            iArcPressDuration = Mathf.Min((float)context.duration, MAXARCDURATION); // increase duration 
+            HandleInput();
+            iArcReleased = false;
+        }
+        else
+            Debug.Log("First");
 
     }
 }

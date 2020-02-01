@@ -14,6 +14,11 @@ public class GroundedState : MovingState
         {
             return new JumpingState(p.iJumpPressDuration * p.JUMPSQUATFORCE);
         }
+        else if (p.iArcReleased)
+        {
+            return new ArcJumpState(p, p.iArcPressDuration, p.iHorz);
+            // return new ArcJumpState(); 
+        }
         return base.HandleInput(p);
 
     }
