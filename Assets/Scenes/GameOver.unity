@@ -591,6 +591,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4274210957958581550, guid: 86870cef0c0238e4391e188e43b77dbb,
+        type: 3}
+      propertyPath: sounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 74b6df7a3841f614ebbf6cb3c3ee24f3, type: 3}
+    - target: {fileID: 4274210957958581550, guid: 86870cef0c0238e4391e188e43b77dbb,
+        type: 3}
+      propertyPath: sounds.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4529790ff9ae5594981eed55fe9efa4f, type: 3}
     - target: {fileID: 7075102525827065991, guid: 86870cef0c0238e4391e188e43b77dbb,
         type: 3}
       propertyPath: m_LocalRotation.z

@@ -4782,6 +4782,7 @@ MonoBehaviour:
   - {fileID: 8592336299258437559}
   animator: {fileID: 0}
   isActive: 0
+  attackController: {fileID: 2950376976139560202}
 --- !u!1 &8592336301162038542
 GameObject:
   m_ObjectHideFlags: 0

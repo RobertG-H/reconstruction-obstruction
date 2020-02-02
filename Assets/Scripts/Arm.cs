@@ -5,11 +5,20 @@ using Anima2D;
 
 public class Arm : Fixable
 {
+    private bool once = false;
+    public AttackController attackController;
     void Update()
     {
         if (isActive)
         {
-            animator.SetBool("attack", true);
+            if (!once)
+            {
+                animator.SetBool("attack", true);
+                once = true;
+                attackController.SetDamage(1);
+
+            }
+
         }
     }
 }
