@@ -10,17 +10,17 @@ public abstract class EntityController : MonoBehaviour
     [HideInInspector]
     public Animator anim;
 
-    public float ACCELSLOWDOWN = 120;
-    public float ACCELX = 50;
-    public float STOPTHRESH = 1;
-    public float SLOWDOWNTHRES = 2;
-    public float ABSMAXSPEEDX = 10;
+    public float ACCELSLOWDOWN;
+    public float ACCELX;
+    public float STOPTHRESH;
+    public float SLOWDOWNTHRES;
+    public float ABSMAXSPEEDX;
     [HideInInspector]
     public float currentMaxSpeedX;
     public float AIRACCELX;
-    public float ARCFORCEX = 5;
+    public float ARCFORCEX;
 
-    public float ARCFORCEY = 10;
+    public float ARCFORCEY;
 
     public float RAYCASTDOWNDIST = 0.8f;
 
@@ -63,8 +63,22 @@ public abstract class EntityController : MonoBehaviour
         int layerMask = 1 << LayerMask.NameToLayer("Ignore Raycast");
         layerMask = ~layerMask;
         Vector3 currentPos = transform.position;
+        float raycastSpacing = 0.95f;
+        currentPos.x -= raycastSpacing;
 
-        if (Physics2D.Raycast(currentPos, transform.TransformDirection(Vector3.down), RAYCASTDOWNDIST, layerMask).collider == null)
+        int hitRayCasts = 0;
+        for (int i = 0; i < 3; i++)
+        {
+            if (Physics2D.Raycast(currentPos, transform.TransformDirection(Vector3.down), RAYCASTDOWNDIST, layerMask).collider != null)
+            {
+                hitRayCasts++;
+                Debug.DrawRay(currentPos, transform.TransformDirection(Vector3.down) * RAYCASTDOWNDIST, Color.green);
+            }
+            currentPos.x += raycastSpacing;
+        }
+        currentPos.x -= raycastSpacing;
+
+        if (hitRayCasts < 3)
         {
             Debug.DrawRay(currentPos, transform.TransformDirection(Vector3.down) * RAYCASTDOWNDIST, Color.yellow);
             return false;

@@ -1,5 +1,111 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1598931704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405111999831717543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a3e90c030ed8540bf908a3a0088cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  fort: {fileID: 0}
+  cam: {fileID: 2428965938528867019}
+--- !u!114 &1718925975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405111999831717543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 13a75439cd9ccbf4c959d067169ea0f2,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 405111999831717722}
+        m_MethodName: OnHorizontal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 162fce5d-5ba6-46e4-bdaa-c4b3c6e9b18a
+    m_ActionName: Gameplay/Horizontal[/XInputControllerWindows/leftStick/x,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 405111999831717722}
+        m_MethodName: OnArcPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b96e3b9e-ae22-4fa0-b5cf-ddc08e83f071
+    m_ActionName: Gameplay/ArcPressed[/Keyboard/k,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 405111999831717722}
+        m_MethodName: OnCancelArcPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7a99eecf-0fb4-49d6-8ba0-28daa280e1a2
+    m_ActionName: Gameplay/CancelArcPressed[/Keyboard/l,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 405111999831717722}
+        m_MethodName: OnGroundPoundPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d8e46036-2400-439f-8206-5dcbf42c60e7
+    m_ActionName: Gameplay/New action
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &558306100941557045
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,7 +154,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 1
   m_BoneTransforms:
   - {fileID: 3786664481683030902}
@@ -87,8 +193,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
@@ -179,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.1857442
+  m_Length: 1.185745
   m_ChildTransform: {fileID: 3786664481683030902}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1588725279075628183
@@ -277,7 +383,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 1
   m_BoneTransforms:
   - {fileID: 177866090401847923}
@@ -316,8 +422,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
@@ -332,97 +438,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 2.9397392, y: -0.013526678, z: 0}
     m_Extent: {x: 5.046235, y: 2.2014995, z: 0}
   m_DirtyAABB: 0
---- !u!114 &1718925975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405111999831717543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 13a75439cd9ccbf4c959d067169ea0f2,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 405111999831717722}
-        m_MethodName: OnHorizontal
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 162fce5d-5ba6-46e4-bdaa-c4b3c6e9b18a
-    m_ActionName: Gameplay/Horizontal[/XInputControllerWindows/leftStick/x,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 405111999831717722}
-        m_MethodName: OnArcPressed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b96e3b9e-ae22-4fa0-b5cf-ddc08e83f071
-    m_ActionName: Gameplay/ArcPressed[/Keyboard/k,/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 405111999831717722}
-        m_MethodName: OnCancelArcPressed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 7a99eecf-0fb4-49d6-8ba0-28daa280e1a2
-    m_ActionName: Gameplay/CancelArcPressed[/Keyboard/l,/XInputControllerWindows/buttonEast]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 405111999831717722}
-        m_MethodName: OnGroundPoundPressed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d8e46036-2400-439f-8206-5dcbf42c60e7
-    m_ActionName: Gameplay/New action
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: Gameplay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &1772854442748275358
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +486,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 1
   m_BoneTransforms:
   - {fileID: 9174103673807970991}
@@ -510,8 +525,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
@@ -574,7 +589,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 1
   m_BoneTransforms:
   - {fileID: 4675112522410435473}
@@ -613,8 +628,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
@@ -674,7 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.2474997
+  m_Length: 1.2474995
   m_ChildTransform: {fileID: 4675112522410435473}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &3207140732710898337
@@ -770,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.18000028
+  m_Length: 0.18000038
   m_ChildTransform: {fileID: 177866090401847923}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &4161834288430889524
@@ -818,7 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.3900036
+  m_Length: 1.3900032
   m_ChildTransform: {fileID: 4352359477399078076}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &4324243327948389728
@@ -963,7 +978,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 2
   m_BoneTransforms:
   - {fileID: 7130960326513726002}
@@ -1002,8 +1017,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 2
   serializedVersion: 2
   m_Quality: 0
@@ -1113,7 +1128,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 2
   m_BoneTransforms:
   - {fileID: 4352359477399078076}
@@ -1152,8 +1167,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 2
   serializedVersion: 2
   m_Quality: 0
@@ -1260,7 +1275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.0000006
+  m_Length: 1.0000005
   m_ChildTransform: {fileID: 5774274765621212940}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &5511285987859751001
@@ -1358,7 +1373,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 0
   m_BoneTransforms:
   - {fileID: 5306347552465376475}
@@ -1397,8 +1412,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
@@ -1461,7 +1476,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 0
   m_BoneTransforms:
   - {fileID: 4396290292815050480}
@@ -1500,8 +1515,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
@@ -1618,7 +1633,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 1
   m_BoneTransforms:
   - {fileID: 0}
@@ -1657,8 +1672,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
@@ -1721,7 +1736,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 1
   m_BoneTransforms:
   - {fileID: 5296704219410954438}
@@ -1760,8 +1775,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
@@ -1824,7 +1839,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 2
   m_BoneTransforms:
   - {fileID: 0}
@@ -1863,8 +1878,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 2
   serializedVersion: 2
   m_Quality: 0
@@ -1927,7 +1942,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 2
   m_BoneTransforms:
   - {fileID: 0}
@@ -1966,8 +1981,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 2
   serializedVersion: 2
   m_Quality: 0
@@ -2030,7 +2045,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 1
   m_BoneTransforms:
   - {fileID: 6494920593089866102}
@@ -2069,8 +2084,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 1
   serializedVersion: 2
   m_Quality: 0
@@ -2180,7 +2195,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -542927177
   m_SortingOrder: 3
   m_BoneTransforms:
   - {fileID: 90739105521390095}
@@ -2219,8 +2234,8 @@ SkinnedMeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -542927177
+  m_SortingLayer: 4
   m_SortingOrder: 3
   serializedVersion: 2
   m_Quality: 0
@@ -2242,6 +2257,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 843210313, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -542927177
+      objectReference: {fileID: 0}
+    - target: {fileID: 843210313, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075066912, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.7408097
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075066912, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.1466193
+      objectReference: {fileID: 0}
     - target: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
         type: 3}
       propertyPath: AIRACCELX
@@ -2257,20 +2290,70 @@ PrefabInstance:
       propertyPath: GPSPEED
       value: -40
       objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: ABSMAXSPEEDX
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: ARCFORCEX
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: ARCFORCEY
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 1598931704}
+    - target: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: NORMALFALLMULTIPLIER
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: ACCELSLOWDOWN
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: ACCELX
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: RAYCASTDOWNDIST
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2098484562075067356, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075067356, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -542927177
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098484562075067356, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2098484562075067357, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10.6
       objectReference: {fileID: 0}
     - target: {fileID: 2098484562075067357, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -18.85
       objectReference: {fileID: 0}
     - target: {fileID: 2098484562075067357, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
         type: 3}
@@ -2332,8 +2415,19 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -40
       objectReference: {fileID: 0}
+    - target: {fileID: 7697111742145999124, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.98
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5, type: 3}
+--- !u!20 &2428965938528867019 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4122205457821386675, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1765533790758212984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &405111999831717722 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2098484562075066914, guid: 3bdc9cfefcfb92c45b1e336cd56d4fd5,

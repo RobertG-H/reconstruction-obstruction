@@ -100,6 +100,7 @@ public class PlayerController : EntityController
         {
             currentMaxSpeedX /= 2.5f;
             arcRenderer.isCharging = true;
+            cameraController.Zoom(40f, MAXARCDURATION - 0.2f);
             iArcPressed = true;
             HandleInput();
             iArcPressed = false;
@@ -109,6 +110,7 @@ public class PlayerController : EntityController
         {
             currentMaxSpeedX = ABSMAXSPEEDX;
             arcRenderer.isCharging = false;
+            cameraController.ZoomReset();
             iArcReleased = true;
             iArcPressDuration = Mathf.Min((float)context.duration, MAXARCDURATION);
             HandleInput();

@@ -44,9 +44,15 @@ TagManager:
   - name: BG
     uniqueID: 1582005899
     locked: 0
+  - name: Nail
+    uniqueID: 1520857777
+    locked: 0
   - name: Enemy
     uniqueID: 2923671245
     locked: 0
   - name: Player
     uniqueID: 3752040119
+    locked: 0
+  - name: Particles
+    uniqueID: 458645877
     locked: 0
