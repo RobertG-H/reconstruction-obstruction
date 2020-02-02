@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         gameEnded = true;
         Time.timeScale = 0;
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
         // gameOverScreen.color = new Color(1, 1, 1, 1);
     }
 
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         gameEnded = true;
         Time.timeScale = 0;
 
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
 
     }
 

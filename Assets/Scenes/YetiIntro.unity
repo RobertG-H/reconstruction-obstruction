@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 83392292}
   - component: {fileID: 83392294}
   - component: {fileID: 83392295}
+  - component: {fileID: 83392296}
   m_Layer: 0
   m_Name: spaghetti
   m_TagString: Untagged
@@ -227,8 +228,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e274e6a4ac658e9498f86175388d98a9, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.31
+  m_PlayOnAwake: 0
+  m_Volume: 0.36
   m_Pitch: 0.3
   Loop: 0
   Mute: 0
@@ -312,6 +313,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &83392296
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83392291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8961b1b2797424a428f319430aacd606, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &826241546
 GameObject:
   m_ObjectHideFlags: 0

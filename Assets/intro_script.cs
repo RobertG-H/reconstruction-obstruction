@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class intro_script : MonoBehaviour
 {
@@ -9,29 +11,14 @@ public class intro_script : MonoBehaviour
     public AudioSource introSound;
     private IEnumerator coroutine;
     // Start is called before the first frame update
-    void Start()
+
+    public void LoadGame()
     {
-        coroutine = Fade(2.0f);
-        StartCoroutine(coroutine);
-
-
+        SceneManager.LoadScene(1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaySound()
     {
-
-    }
-
-    // every 2 seconds perform the print()
-    private IEnumerator Fade(float waitTime)
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(waitTime / 2);
-            print("WaitAndPrint " + Time.time);
-            yield return new WaitForSeconds(waitTime / 2);
-
-        }
+        introSound.Play();
     }
 }
