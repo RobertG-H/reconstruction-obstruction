@@ -182,12 +182,12 @@ TextureImporter:
       name: Fortman_Paint_1
       rect:
         serializedVersion: 2
-        x: 500
-        y: 2763
-        width: 415.02924
-        height: 570.5469
+        x: 500.99997
+        y: 2763.9998
+        width: 411.6113
+        height: 568.8379
       alignment: 9
-      pivot: {x: 0.49755517, y: 0.49864483}
+      pivot: {x: 0.49925736, y: 0.49838495}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: Fortman_Paint_2
       rect:
         serializedVersion: 2
-        x: 1021
-        y: 2761
-        width: 430.41016
-        height: 572.25586
+        x: 1022
+        y: 2761.9998
+        width: 428.70117
+        height: 570.5469
       alignment: 9
-      pivot: {x: 0.49836186, y: 0.4989027}
+      pivot: {x: 0.49801588, y: 0.49864483}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: Fortman_Paint_3
       rect:
         serializedVersion: 2
-        x: 1606
-        y: 2768
-        width: 127.91992
-        height: 536.3672
+        x: 1607.0001
+        y: 2769
+        width: 124.50183
+        height: 534.6582
       alignment: 9
-      pivot: {x: 0.4924956, y: 0.49779284}
+      pivot: {x: 0.49798363, y: 0.49844974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: Fortman_Paint_4
       rect:
         serializedVersion: 2
-        x: 1886
-        y: 2788
-        width: 232.16797
+        x: 1887.0001
+        y: 2789
+        width: 230.4591
         height: 515.8594
       alignment: 9
-      pivot: {x: 0.49533102, y: 0.4981978}
+      pivot: {x: 0.4968338, y: 0.497229}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -350,12 +350,12 @@ TextureImporter:
       name: Fortman_Paint_9
       rect:
         serializedVersion: 2
-        x: 1719
-        y: 2156
-        width: 755.1172
-        height: 449.20898
+        x: 1548.0001
+        y: 2254
+        width: 235.5857
+        height: 375.72266
       alignment: 9
-      pivot: {x: 0.4985981, y: 0.49754074}
+      pivot: {x: 0.4945117, y: 0.49637613}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -371,12 +371,12 @@ TextureImporter:
       name: Fortman_Paint_10
       rect:
         serializedVersion: 2
-        x: 98
-        y: 1628
-        width: 264.63867
-        height: 380.84973
+        x: 1936.5751
+        y: 2342.1282
+        width: 527.82214
+        height: 372.3047
       alignment: 9
-      pivot: {x: 0.49690396, y: 0.49757093}
+      pivot: {x: 0.49434254, y: 0.49387392}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -413,12 +413,12 @@ TextureImporter:
       name: Fortman_Paint_12
       rect:
         serializedVersion: 2
-        x: 1353
-        y: 1920
-        width: 232.16785
-        height: 232.16797
+        x: 417
+        y: 1971.9999
+        width: 233.87701
+        height: 233.87708
       alignment: 9
-      pivot: {x: 0.4953313, y: 0.49748516}
+      pivot: {x: 0.493849, y: 0.4938497}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -434,12 +434,12 @@ TextureImporter:
       name: Fortman_Paint_13
       rect:
         serializedVersion: 2
-        x: 1922.0001
-        y: 1652
-        width: 256.09363
-        height: 392.81262
+        x: 744
+        y: 1712.9999
+        width: 329.58008
+        height: 298.81836
       alignment: 9
-      pivot: {x: 0.4959119, y: 0.49769276}
+      pivot: {x: 0.49911997, y: 0.4986311}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -455,12 +455,12 @@ TextureImporter:
       name: Fortman_Paint_14
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 1642
-        width: 244.13086
-        height: 247.5487
+        x: 2090
+        y: 1743
+        width: 368.88672
+        height: 493.64258
       alignment: 9
-      pivot: {x: 0.49563584, y: 0.4948521}
+      pivot: {x: 0.497442, y: 0.4983363}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

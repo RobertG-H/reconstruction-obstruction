@@ -16,9 +16,12 @@ public class NailController : MonoBehaviour
     public float moveSpeed;
 
     private bool moving = false;
-    private bool isHit = false;
+    public bool isHit = false;
 
     private float weight = 0.0f;
+
+    public delegate void NailHit();
+    public static event NailHit OnNailHit;
     // Start is called before the first frame update
     void Awake()
     {
@@ -62,6 +65,8 @@ public class NailController : MonoBehaviour
 
     void nailHit()
     {
+        if (isHit) return;
+        OnNailHit();
         moving = true;
         if (weapon == null)
         {
@@ -69,7 +74,6 @@ public class NailController : MonoBehaviour
         }
         else
         {
-
             weapon.repair();
         }
     }

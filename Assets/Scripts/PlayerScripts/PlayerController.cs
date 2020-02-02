@@ -13,6 +13,8 @@ public class PlayerController : EntityController
 
     public HealthBarController healthBar;
 
+    public DamageFlashController damageFlash;
+
     public float HEALTH;
     public float MAXHEALTH;
 
@@ -40,11 +42,24 @@ public class PlayerController : EntityController
 
     public bool isGroundPounding = false;
 
+    public bool isHitable = true;
+
     // DELEGATES AND EVENTS
     public delegate void PlayerDeath();
     public static event PlayerDeath OnPlayerDeath;
 
     // Start is called before the first frame update
+
+    void OnEnable()
+    {
+
+        DamageFlashController.OnFlashComplete += ResetFlash;
+    }
+
+    void OnDisable()
+    {
+        DamageFlashController.OnFlashComplete -= ResetFlash;
+    }
     public override void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -143,9 +158,13 @@ public class PlayerController : EntityController
 
     public void TakeHit(Vector3 otherPos, float damage, float knockback)
     {
+        if (damage <= 0.0f) return;
+        Debug.Log(string.Format("BEEN HIT, with isHitable {0}", isHitable));
+        if (!isHitable) return;
+        isHitable = false;
+        damageFlash.isFlashing = true;
         HEALTH -= damage;
         healthBar.UpdateHealth(HEALTH, MAXHEALTH);
-        // Debug.Log(HEALTH);
         if (HEALTH <= 0)
             OnPlayerDeath();
     }
@@ -153,5 +172,10 @@ public class PlayerController : EntityController
     public bool CheckHitting()
     {
         return isHitting;
+    }
+
+    private void ResetFlash()
+    {
+        isHitable = true;
     }
 }

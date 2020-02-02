@@ -6,8 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject player;
-    public GameObject[] nails;
+    public NailController[] nails;
+
+    public FinalNail finalNail;
     public GameObject[] pauseUI;
+
+    public int totalHitNails = 0;
+    public int nailsUntilFinal = 4;
 
     private bool gameEnded = false;
     // Start is called before the first frame update
@@ -16,11 +21,16 @@ public class GameManager : MonoBehaviour
     {
 
         PlayerController.OnPlayerDeath += GameOver;
+        NailController.OnNailHit += NailHit;
+        FinalNail.OnFinalNailHit += GameWon;
+
     }
 
     void OnDisable()
     {
         PlayerController.OnPlayerDeath -= GameOver;
+        NailController.OnNailHit -= NailHit;
+        FinalNail.OnFinalNailHit -= GameWon;
     }
     void Start()
     {
@@ -34,9 +44,20 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    void NailHit()
+    {
+        totalHitNails += 1;
+        if (totalHitNails == nailsUntilFinal)
+        {
+            finalNail.showFinal();
+        }
+    }
+
     void GameWon()
     {
-        //won game
+        Debug.Log("YOU WINIININININININININI");
+        gameEnded = true;
+        Time.timeScale = 0;
     }
 
     void CheckPaused()
