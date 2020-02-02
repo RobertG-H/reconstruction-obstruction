@@ -19,4 +19,9 @@ public class ChargingState : MovingState
     {
         return base.Update(p);
     }
+    public override void StateEnter(PlayerController p)
+    {
+        p.ResetStates();
+        p.anim.SetBool("charging", true);
+    }
 }

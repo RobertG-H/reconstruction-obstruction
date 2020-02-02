@@ -708,6 +708,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1371296051
       objectReference: {fileID: 0}
+    - target: {fileID: 7855326525662304213, guid: 7fb5cb91394d0014b93fe1f59f1cbbd7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7855326525662304214, guid: 7fb5cb91394d0014b93fe1f59f1cbbd7,
         type: 3}
       propertyPath: m_Mesh
@@ -876,7 +881,7 @@ PrefabInstance:
     - target: {fileID: 7855326526346605943, guid: 7fb5cb91394d0014b93fe1f59f1cbbd7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7855326526567256084, guid: 7fb5cb91394d0014b93fe1f59f1cbbd7,
         type: 3}
