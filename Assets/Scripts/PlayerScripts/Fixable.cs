@@ -14,7 +14,7 @@ public class Fixable : AttackController
     // Start is called before the first frame update
     void Start()
     {
-
+        base.SetDamage(0);
         if (animator == null)
             animator = GetComponent<Animator>();
         foreach (SpriteMeshInstance sr in spriteRenderers)
@@ -30,6 +30,8 @@ public class Fixable : AttackController
     }
     public void repair()
     {
+        base.SetDamage(1);
+
         foreach (SpriteMeshInstance sr in spriteRenderers)
         {
             sr.color = Color.white;

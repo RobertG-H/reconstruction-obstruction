@@ -2512,9 +2512,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  piledriverProjectile: {fileID: 0}
+  spriteRenderers:
+  - {fileID: 8592336300528498801}
+  - {fileID: 8592336300038970984}
+  - {fileID: 8592336301129165202}
+  animator: {fileID: 8592336300398547951}
+  isActive: 0
+  piledriverProjectiles:
+  - {fileID: 625564713513014549, guid: ba9b6d1c78b413342afe4c24a0dcc7b1, type: 3}
+  - {fileID: 6141190518877240676, guid: 1fa99a411fcc01649a26b3d47b2c9805, type: 3}
   projectileForce: 10
-  projectileStartingPosition: 1
+  projDisplacement: 10
+  projFloor: 68
+  deleteAfter: 1.5
 --- !u!1 &8592336300179845238
 GameObject:
   m_ObjectHideFlags: 0
@@ -4981,6 +4991,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8592336300083193188}
     m_Modifications:
+    - target: {fileID: 4215440694954603176, guid: 8608e69c984d5e74f9d4e1224eda5623,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 752613776273775055}
     - target: {fileID: 8792916547951522044, guid: 8608e69c984d5e74f9d4e1224eda5623,
         type: 3}
       propertyPath: m_Name
