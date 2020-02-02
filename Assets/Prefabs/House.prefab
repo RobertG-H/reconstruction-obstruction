@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9011820175685223279}
   - component: {fileID: 1417622801591108560}
   - component: {fileID: 2625246582533272002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyPlatform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 7675938447322619184}
   - component: {fileID: 1202641559094712322}
   - component: {fileID: 1216883139689691125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyPlatform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 6134247478093255582}
   - component: {fileID: 2657538933871040074}
   - component: {fileID: 6779661279039312700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyPlatform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 1772809952835633017}
   - component: {fileID: 7465898931936645259}
   - component: {fileID: 979464138060830477}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyPlatform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -3554,6 +3554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyController: {fileID: 8592336300934343652}
+  fixable: {fileID: 1479928052}
 --- !u!50 &8592336300934343654
 Rigidbody2D:
   serializedVersion: 4
@@ -4332,7 +4333,7 @@ GameObject:
   - component: {fileID: 1777106925430817250}
   - component: {fileID: 840898016479643669}
   - component: {fileID: 4039275828121275076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyPlatform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -4506,7 +4507,7 @@ GameObject:
   - component: {fileID: 7222181008788912916}
   - component: {fileID: 7661459739269062598}
   - component: {fileID: 6530472003725460020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyPlatform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}

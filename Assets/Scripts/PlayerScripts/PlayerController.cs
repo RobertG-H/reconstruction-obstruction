@@ -70,7 +70,7 @@ public class PlayerController : EntityController
     }
     void Update()
     {
-        Debug.Log(state.ToString());
+        // Debug.Log(state.ToString());
         RayCastGround();
         CheckNewState(state.Update(this));
     }

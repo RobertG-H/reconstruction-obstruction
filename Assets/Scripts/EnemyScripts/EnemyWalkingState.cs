@@ -24,24 +24,15 @@ public class EnemyWalkingState : EnemyState
 
         if (Mathf.Abs(enemy.iHorz) > 0)
         {
-            enemy.body.AddForce(enemy.transform.right * Mathf.Sign(enemy.iHorz) * enemy.ACCELX);
-            if (Mathf.Abs(enemy.body.velocity.x) > enemy.MAXSPEEDX)
-            {
-                enemy.body.velocity = new Vector2(enemy.MAXSPEEDX * Mathf.Sign(enemy.body.velocity.x), enemy.body.velocity.y);
-            }
+
+            enemy.body.velocity = new Vector2(enemy.MAXSPEEDX * enemy.iHorz, 0);
+
         }
         else
         {
-            if (Mathf.Abs(enemy.body.velocity.x) <= enemy.SLOWDOWNTHRES && Mathf.Abs(enemy.body.velocity.x) > enemy.STOPTHRESH)
-            {
-                enemy.body.AddForce(new Vector2(Mathf.Sign(enemy.body.velocity.x), 0) * -enemy.ACCELSLOWDOWN);
-            }
-            else
-            {
-                enemy.Stop();
-            }
+            enemy.Stop();
         }
-        enemy.anim.SetFloat("speed", Mathf.Sign(enemy.body.velocity.x));
+        // enemy.anim.SetFloat("speed", Mathf.Sign(enemy.body.velocity.x));
         return null;
         // return base.Update(enemy);
 
@@ -49,6 +40,6 @@ public class EnemyWalkingState : EnemyState
     public override void StateEnter(EnemyController enemy)
     {
         enemy.ResetStates();
-        //enemy.anim.SetBool("walking", true);
+        enemy.anim.SetBool("walking", true);
     }
 }
