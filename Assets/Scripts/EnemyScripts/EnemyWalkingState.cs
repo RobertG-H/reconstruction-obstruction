@@ -49,6 +49,6 @@ public class EnemyWalkingState : EnemyState
     public override void StateEnter(EnemyController enemy)
     {
         enemy.ResetStates();
-        enemy.anim.SetBool("walking", true);
+        //enemy.anim.SetBool("walking", true);
     }
 }

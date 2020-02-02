@@ -8,15 +8,30 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject[] nails;
     public GameObject[] pauseUI;
+
+    private bool gameEnded = false;
     // Start is called before the first frame update
+
+    void OnEnable()
+    {
+
+        PlayerController.OnPlayerDeath += GameOver;
+    }
+
+    void OnDisable()
+    {
+        PlayerController.OnPlayerDeath -= GameOver;
+    }
     void Start()
     {
-        
+        Time.timeScale = 1;
     }
 
     void GameOver()
     {
-        //lost game
+        Debug.Log("GAME OVER");
+        gameEnded = true;
+        Time.timeScale = 0;
     }
 
     void GameWon()
@@ -26,18 +41,20 @@ public class GameManager : MonoBehaviour
 
     void CheckPaused()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (Time.timeScale == 1)
             {
                 Time.timeScale = 0;
                 TogglePause(true);
-            } else if (Time.timeScale == 0) {
+            }
+            else if (Time.timeScale == 0)
+            {
                 Time.timeScale = 1;
                 TogglePause(false);
             }
         }
-        if(Time.timeScale == 0)
+        if (Time.timeScale == 0)
         {
             CheckReset();
         }
@@ -45,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     void CheckReset()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
@@ -53,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     void TogglePause(bool status)
     {
-        foreach(GameObject element in pauseUI)
+        foreach (GameObject element in pauseUI)
         {
             element.SetActive(status);
         }
@@ -74,6 +91,8 @@ public class GameManager : MonoBehaviour
         // {
         //     GameOver();
         // }
-        CheckPaused();
+        if (!gameEnded)
+            CheckPaused();
+        CheckReset();
     }
 }

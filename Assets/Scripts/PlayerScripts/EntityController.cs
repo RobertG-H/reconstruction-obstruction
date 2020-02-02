@@ -49,7 +49,7 @@ public abstract class EntityController : MonoBehaviour
     }
     public void ResetStates()
     {
-        Debug.LogWarning("EntityController: ResetStates() -> No animations implemented. Cannot reset states.");
+        //Debug.LogWarning("EntityController: ResetStates() -> No animations implemented. Cannot reset states.");
         foreach (AnimatorControllerParameter param in anim.parameters)
         {
             if (param.type == AnimatorControllerParameterType.Bool)
@@ -72,20 +72,22 @@ public abstract class EntityController : MonoBehaviour
             if (Physics2D.Raycast(currentPos, transform.TransformDirection(Vector3.down), RAYCASTDOWNDIST, layerMask).collider != null)
             {
                 hitRayCasts++;
-                Debug.DrawRay(currentPos, transform.TransformDirection(Vector3.down) * RAYCASTDOWNDIST, Color.green);
+                Debug.DrawRay(currentPos, transform.TransformDirection(Vector3.down) * RAYCASTDOWNDIST, Color.yellow);
+            }
+            else
+            {
+                Debug.DrawRay(currentPos, transform.TransformDirection(Vector3.down) * RAYCASTDOWNDIST, Color.red);
             }
             currentPos.x += raycastSpacing;
         }
         currentPos.x -= raycastSpacing;
 
-        if (hitRayCasts < 3)
+        if (hitRayCasts == 0)
         {
-            Debug.DrawRay(currentPos, transform.TransformDirection(Vector3.down) * RAYCASTDOWNDIST, Color.yellow);
             return false;
         }
         else
         {
-            Debug.DrawRay(currentPos, transform.TransformDirection(Vector3.down) * RAYCASTDOWNDIST, Color.red);
             return true;
         }
     }

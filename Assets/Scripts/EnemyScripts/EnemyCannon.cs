@@ -6,23 +6,25 @@ public class EnemyCannon : MonoBehaviour
 {
     // cannon 
     public Transform cannonBoneTransform;
+    public Transform cannonSpawnPoint;
     public float rotationSpeed = 5f;
     public float deltaAngle = -10; // fix difference in the art and actual rotation bullet is firing from 
 
     // bullet 
     public GameObject bullet;
-    private float timeHorFlying = 1.5f;
-    private float timeVerFlying = 0.5f; 
-    public float bulletForce = 100;
+    public float timeHorFlying = 2.5f;
+    public float timeVerFlying = 2.0f;
+    private float bulletForce = 100;
 
     // shooting
     private int timePassed = 1;
-    public float vSpeed;
-    public float hSpeed;
-    
+    private float vSpeed;
+    private float hSpeed;
+    public int framesToShoot = 150;
+
     // player; rat 
-    public Transform ratTransform; 
-    
+    public Transform ratTransform;
+
 
     void Start()
     {
@@ -34,7 +36,7 @@ public class EnemyCannon : MonoBehaviour
     {
         Vector3 direction = ratTransform.position - cannonBoneTransform.position; // direction bullet is fired 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // angle between cannon and rat 
-        Quaternion rotation = Quaternion.AngleAxis(angle + deltaAngle, Vector3.forward); 
+        Quaternion rotation = Quaternion.AngleAxis(angle + deltaAngle, Vector3.forward);
         cannonBoneTransform.rotation = Quaternion.Slerp(cannonBoneTransform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
         vSpeed = (ratTransform.position.y - cannonBoneTransform.position.y) * timeVerFlying;
@@ -42,11 +44,11 @@ public class EnemyCannon : MonoBehaviour
 
 
         GameObject bulletInstance;
-        if (timePassed % 150 == 0) 
+        if (timePassed % framesToShoot == 0)
         {
-            bulletInstance = Instantiate(bullet, cannonBoneTransform.position, rotation);
-            bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3(hSpeed, vSpeed, 0); 
-            timePassed = 1; 
+            bulletInstance = Instantiate(bullet, cannonSpawnPoint.position, rotation);
+            bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3(hSpeed, vSpeed, 0);
+            timePassed = 1;
         }
         timePassed++;
     }

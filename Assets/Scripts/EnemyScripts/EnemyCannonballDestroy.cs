@@ -2,19 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCannonballDestroy : MonoBehaviour
+public class EnemyCannonballDestroy : AttackController
 {
     public float timeoutDestructor = 2.5f;
-    public GameObject bulletInstance; 
+    public GameObject bulletInstance;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(bulletInstance, timeoutDestructor); ; 
+        Destroy(bulletInstance, timeoutDestructor); ;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(bulletInstance); 
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("PLAYER IT");
+
+            other.gameObject.GetComponent<PlayerController>().TakeHit(transform.position, damage, GetKnockback());
+            Destroy(bulletInstance);
+        }
     }
 }
