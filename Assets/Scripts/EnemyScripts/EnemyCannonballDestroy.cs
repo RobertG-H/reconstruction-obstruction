@@ -10,7 +10,7 @@ public class EnemyCannonballDestroy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(cannonballInstance, 1.0f); 
+        Destroy(cannonballInstance, timeoutDestructor); 
     }
 
     void OnCollisionEnter(Collision collision)
