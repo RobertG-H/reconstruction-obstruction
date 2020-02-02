@@ -19,9 +19,20 @@ public class NailController : MonoBehaviour
     private bool isHit = false;
 
     private float weight = 0.0f;
+    private SoundManager nailSound1;
+    private SoundManager nailSound2;
+
+    public GameObject house;
+    private FortSounds fortSounds;
+ 
     // Start is called before the first frame update
     void Awake()
     {
+        print(GetComponents<SoundManager>().Length);
+        nailSound1 = GetComponents<SoundManager>()[0];
+        nailSound2 = GetComponents<SoundManager>()[1];
+        fortSounds = house.GetComponent<FortSounds>();
+
         particleSystem = GetComponent<ParticleSystem>();
     }
 
@@ -38,6 +49,9 @@ public class NailController : MonoBehaviour
         {
             particleSystem.Stop();
             isHit = true;
+            Debug.Log("stopped moving");
+            nailSound2.PlaySound("nail2");
+            fortSounds.PlaySound("roar");
         }
         if (moving)
         {
@@ -54,6 +68,10 @@ public class NailController : MonoBehaviour
             if (other.gameObject.GetComponent<PlayerController>().CheckHitting())
             {
                 Debug.Log("PLAYER NAIL HIT");
+                if(!isHit)
+                {
+                    nailSound1.PlaySound("nail");
+                }
                 nailHit();
             }
 

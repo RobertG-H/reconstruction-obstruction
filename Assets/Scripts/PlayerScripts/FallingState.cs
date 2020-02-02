@@ -19,6 +19,7 @@ public class FallingState : AerialState
             {
                 p.cameraController.Shake(0.4f, 0.4f);
                 p.isGroundPounding = false;
+                p.ratSounds.PlayRatSound("hammer-touchdown");
             }
 
             p.currentFallMultiplier = p.NORMALFALLMULTIPLIER;

@@ -25,6 +25,12 @@ public class EnemyCannon : Fixable
     // player; rat 
     public Transform ratTransform;
 
+    private SoundManager soundManager;
+
+    void Start()
+    {
+        soundManager = GetComponent<SoundManager>();
+    }
 
     void Update()
     {
@@ -43,6 +49,7 @@ public class EnemyCannon : Fixable
         {
             bulletInstance = Instantiate(bullet, cannonSpawnPoint.position, rotation);
             bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector3(hSpeed, vSpeed, 0);
+            soundManager.PlaySound("cannon");
             timePassed = 1;
         }
         timePassed++;
