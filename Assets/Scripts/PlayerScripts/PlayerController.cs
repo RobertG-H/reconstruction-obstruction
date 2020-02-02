@@ -11,6 +11,11 @@ public class PlayerController : EntityController
 
     public CameraController cameraController;
 
+    public HealthBarController healthBar;
+
+    public float HEALTH;
+    public float MAXHEALTH;
+
     [HideInInspector]
     public float iHorz;
     [HideInInspector]
@@ -30,6 +35,10 @@ public class PlayerController : EntityController
     public float iArcPressDuration;
 
     private bool arcCancelled = false;
+
+    // DELEGATES AND EVENTS
+    public delegate void PlayerDeath();
+    public static event PlayerDeath OnPlayerDeath;
 
     // Start is called before the first frame update
     public override void Start()
@@ -57,6 +66,7 @@ public class PlayerController : EntityController
     }
     void Update()
     {
+        RayCastGround();
         CheckNewState(state.Update(this));
     }
 
@@ -123,5 +133,14 @@ public class PlayerController : EntityController
     {
         arcRenderer.isCharging = false;
         arcCancelled = true;
+    }
+
+    public void TakeHit(Vector3 otherPos, float damage, float knockback)
+    {
+        HEALTH -= damage;
+        healthBar.UpdateHealth(HEALTH, MAXHEALTH);
+        Debug.Log(HEALTH);
+        if (HEALTH <= 0)
+            OnPlayerDeath();
     }
 }

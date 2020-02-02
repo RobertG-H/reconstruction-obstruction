@@ -6,10 +6,16 @@ using UnityEngine.InputSystem;
 
 public class EnemyPlatform : MonoBehaviour
 {
+    public GameObject[] platforms;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        foreach (GameObject plat in platforms)
+        {
+            LineRenderer lr = plat.GetComponent<LineRenderer>();
+            // lr.enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -22,18 +28,18 @@ public class EnemyPlatform : MonoBehaviour
     {
         if (context.started)
         {
-            for (int i = 0; i < transform.childCount; i++)
+            foreach (GameObject plat in platforms)
             {
-                LineRenderer lr = transform.GetChild(i).gameObject.GetComponent<LineRenderer>();
+                LineRenderer lr = plat.GetComponent<LineRenderer>();
                 lr.enabled = true;
             }
         }
         else
         {
-            for (int i = 0; i < transform.childCount; i++)
+            foreach (GameObject plat in platforms)
             {
-                LineRenderer lr = transform.GetChild(i).gameObject.GetComponent<LineRenderer>();
-                lr.enabled = false;
+                LineRenderer lr = plat.GetComponent<LineRenderer>();
+                // lr.enabled = false;
             }
         }
     }
