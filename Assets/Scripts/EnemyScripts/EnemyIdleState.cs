@@ -36,7 +36,7 @@ public class EnemyIdleState : EnemyState
     public override void StateEnter(EnemyController enemy)
     {
         enemy.Stop();
-        // p.ResetStates();
-        // p.anim.SetBool("idle", true);
+        enemy.ResetStates();
+        enemy.anim.SetBool("idle", true);
     }
 }

@@ -41,13 +41,14 @@ public class EnemyWalkingState : EnemyState
                 enemy.Stop();
             }
         }
+        enemy.anim.SetFloat("speed", Mathf.Sign(enemy.body.velocity.x));
         return null;
         // return base.Update(enemy);
-        // p.anim.SetFloat("walkingSpeed", p.body.velocity.x/p.MAXSPEEDX);
+
     }
     public override void StateEnter(EnemyController enemy)
     {
-        // p.ResetStates();
-        // p.anim.SetBool("walking", true);
+        enemy.ResetStates();
+        enemy.anim.SetBool("walking", true);
     }
 }
