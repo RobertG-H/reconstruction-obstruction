@@ -42,7 +42,11 @@ public class PlayerController : EntityController
 
     public bool isGroundPounding = false;
 
+    [HideInInspector]
+    public RatSounds ratSounds;
+
     public bool isHitable = true;
+
 
     // DELEGATES AND EVENTS
     public delegate void PlayerDeath();
@@ -65,6 +69,7 @@ public class PlayerController : EntityController
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         state = new IdleState();
+        ratSounds = GetComponent<RatSounds>();
         AnimationClip[] clips = anim.runtimeAnimatorController.animationClips;
         // foreach (AnimationClip clip in clips)
         // {
@@ -165,8 +170,15 @@ public class PlayerController : EntityController
         damageFlash.isFlashing = true;
         HEALTH -= damage;
         healthBar.UpdateHealth(HEALTH, MAXHEALTH);
+
+        // Debug.Log(HEALTH);
+        ratSounds.PlayRatSound("RAT-hurt");
+
         if (HEALTH <= 0)
+        {
             OnPlayerDeath();
+            ratSounds.PlayRatSound("RAT-death");
+        }
     }
 
     public bool CheckHitting()

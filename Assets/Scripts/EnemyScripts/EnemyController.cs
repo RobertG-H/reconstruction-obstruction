@@ -32,6 +32,7 @@ public class EnemyController : MonoBehaviour
 
     private EnemyState state;
 
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -41,7 +42,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(string.Format("iHorz: {0}", iHorz));
+        // Debug.Log(string.Format("iHorz: {0}", iHorz));
 
         RayCastDirection();
         CheckNewState(state.Update(this));
