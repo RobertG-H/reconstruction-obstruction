@@ -6,9 +6,12 @@ using UnityEngine.InputSystem;
 public class EnemyInputController : MonoBehaviour
 {
     public EnemyController enemyController;
+
+    public Fixable fixable;
     private float timer;
     private float targetTime;
 
+    private int action = 0;
     void OnEnable()
     {
 
@@ -28,11 +31,18 @@ public class EnemyInputController : MonoBehaviour
     }
     private void Update()
     {
+        if (!fixable.isActive) return;
         // enemyController.HandleHorizontal(1.0f);
         timer += Time.deltaTime;
-        if(timer >= targetTime)
+        if (timer >= targetTime)
         {
-            int action = Random.Range(-1, 1);
+            if (action == -1 || action == 1)
+            {
+                action = 0;
+            }
+            else
+                action = Random.Range(-1, 2);
+
             enemyController.HandleHorizontal(action);
             targetTime = Random.Range(1.0f, 3.0f);
             timer = 0;
@@ -42,6 +52,7 @@ public class EnemyInputController : MonoBehaviour
 
     public void StopEnemy()
     {
+        Debug.Log("GOT HORZONTAL RAYCAST");
         return;
         enemyController.HandleHorizontal(0.0f);
         timer = 0;
