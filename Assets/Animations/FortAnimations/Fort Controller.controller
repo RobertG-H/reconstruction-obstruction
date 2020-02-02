@@ -81,15 +81,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-<<<<<<< Updated upstream
   - m_Name: activated
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-=======
->>>>>>> Stashed changes
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -145,13 +142,8 @@ AnimatorStateMachine:
     m_State: {fileID: -2748686003845541609}
     m_Position: {x: 360, y: 110, z: 0}
   - serializedVersion: 1
-<<<<<<< Updated upstream
     m_State: {fileID: 7283899990519812581}
     m_Position: {x: 90, y: 210, z: 0}
-=======
-    m_State: {fileID: 2659541502956218614}
-    m_Position: {x: 395, y: 175, z: 0}
->>>>>>> Stashed changes
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

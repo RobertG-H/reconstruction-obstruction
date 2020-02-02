@@ -14,7 +14,7 @@ public class EnemyPlatform : MonoBehaviour
         foreach (GameObject plat in platforms)
         {
             LineRenderer lr = plat.GetComponent<LineRenderer>();
-            // lr.enabled = false;
+            lr.enabled = false;
         }
     }
 
@@ -39,7 +39,7 @@ public class EnemyPlatform : MonoBehaviour
             foreach (GameObject plat in platforms)
             {
                 LineRenderer lr = plat.GetComponent<LineRenderer>();
-                // lr.enabled = false;
+                lr.enabled = false;
             }
         }
     }

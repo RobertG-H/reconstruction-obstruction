@@ -55,8 +55,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GAME OVER");
         gameEnded = true;
-        SceneManager.LoadScene(2);
         Time.timeScale = 0;
+
+        SceneManager.LoadScene(2);
         // gameOverScreen.color = new Color(1, 1, 1, 1);
     }
 
@@ -73,9 +74,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("YOU WINIININININININININI");
         gameEnded = true;
+        Time.timeScale = 0;
+
         SceneManager.LoadScene(3);
 
-        Time.timeScale = 0;
     }
 
     void CheckPaused()

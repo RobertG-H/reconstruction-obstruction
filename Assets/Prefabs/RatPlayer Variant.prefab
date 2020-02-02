@@ -413,7 +413,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.31
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -566,6 +566,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: OnArcPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b96e3b9e-ae22-4fa0-b5cf-ddc08e83f071
     m_ActionName: Gameplay/ArcPressed[/Keyboard/k,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
@@ -654,8 +665,8 @@ MonoBehaviour:
   cameraController: {fileID: 2091036274}
   healthBar: {fileID: 713110057}
   damageFlash: {fileID: 2976672338933768158}
-  HEALTH: 30
-  MAXHEALTH: 30
+  HEALTH: 5
+  MAXHEALTH: 5
   iHorz: 0
   iGroundPoundPressed: 0
   iArcReleased: 0
@@ -688,7 +699,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b73cbd7c9ce76c04c927f0ef79ed2658, type: 3}
   - {fileID: 8300000, guid: 40a28ffb78f684440805118e5363c1aa, type: 3}
   - {fileID: 8300000, guid: fcd115d0101d20f4db62268e7e77c354, type: 3}
-  - {fileID: 8300000, guid: e3312d08571a81f4b93d2318c2327ad4, type: 3}
+  - {fileID: 8300000, guid: 4529790ff9ae5594981eed55fe9efa4f, type: 3}
   - {fileID: 8300000, guid: d217ad37396823041b96f73196bb01c7, type: 3}
   - {fileID: 8300000, guid: 7b1daabb489b3eb4b9e75d93d736f539, type: 3}
   - {fileID: 8300000, guid: 3d9978c20aa0c8c47afd3b5013504f3e, type: 3}
@@ -1689,12 +1700,12 @@ PrefabInstance:
     - target: {fileID: 1855898348310528369, guid: ae979cccb2616c645b65b0d16cabf86d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.1
+      value: 123.1
       objectReference: {fileID: 0}
     - target: {fileID: 1855898348310528369, guid: ae979cccb2616c645b65b0d16cabf86d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -58.3
+      value: -67.8
       objectReference: {fileID: 0}
     - target: {fileID: 1855898348310528369, guid: ae979cccb2616c645b65b0d16cabf86d,
         type: 3}
