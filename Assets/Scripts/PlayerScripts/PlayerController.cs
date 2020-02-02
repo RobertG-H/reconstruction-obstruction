@@ -10,6 +10,7 @@ public class PlayerController : EntityController
     public ArcRenderer arcRenderer;
 
     public CameraController cameraController;
+
     [HideInInspector]
     public float iHorz;
     [HideInInspector]
@@ -36,10 +37,10 @@ public class PlayerController : EntityController
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         state = new IdleState();
-        // AnimationClip[] clips = anim.runtimeAnimatorController.animationClips;
-        // foreach(AnimationClip clip in clips)
+        AnimationClip[] clips = anim.runtimeAnimatorController.animationClips;
+        // foreach (AnimationClip clip in clips)
         // {
-        //     switch(clip.name)
+        //     switch (clip.name)
         //     {
         //         case "Slash":
         //             attackDurations[clip.name] = clip.length;
@@ -77,7 +78,6 @@ public class PlayerController : EntityController
         state = newState;
         state.StateEnter(this);
     }
-
     // TODO remove entityinput and playerinput classes
     public void OnHorizontal(InputAction.CallbackContext context)
     {

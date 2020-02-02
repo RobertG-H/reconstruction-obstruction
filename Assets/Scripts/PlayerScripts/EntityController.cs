@@ -50,13 +50,13 @@ public abstract class EntityController : MonoBehaviour
     public void ResetStates()
     {
         Debug.LogWarning("EntityController: ResetStates() -> No animations implemented. Cannot reset states.");
-        // foreach(AnimatorControllerParameter param in anim.parameters)
-        // {
-        // 	if(param.type == AnimatorControllerParameterType.Bool)
-        // 	{
-        // 		anim.SetBool(param.name, false);
-        // 	}
-        // }
+        foreach (AnimatorControllerParameter param in anim.parameters)
+        {
+            if (param.type == AnimatorControllerParameterType.Bool)
+            {
+                anim.SetBool(param.name, false);
+            }
+        }
     }
     public bool RayCastGround()
     {

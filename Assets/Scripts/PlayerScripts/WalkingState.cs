@@ -26,7 +26,7 @@ public class WalkingState : GroundedState
     }
     public override void StateEnter(PlayerController p)
     {
-        // p.ResetStates();
-        // p.anim.SetBool("walking", true);
+        p.ResetStates();
+        p.anim.SetBool("walking", true);
     }
 }
