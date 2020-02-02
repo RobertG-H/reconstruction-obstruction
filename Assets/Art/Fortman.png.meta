@@ -350,12 +350,12 @@ TextureImporter:
       name: Fortman_10
       rect:
         serializedVersion: 2
-        x: 1229
-        y: 1643
-        width: 260
-        height: 216
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1225.709
+        y: 1639.709
+        width: 269.76562
+        height: 221.91418
+      alignment: 9
+      pivot: {x: 0.49409935, y: 0.50150424}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

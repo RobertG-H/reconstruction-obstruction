@@ -10,9 +10,9 @@ public class GroundedState : MovingState
         {
             return new FallingState();
         }
-        else if (p.iJumpReleased)
+        else if (p.iArcPressed)
         {
-            return new JumpingState(p.iJumpPressDuration * p.JUMPSQUATFORCE);
+            return new ChargingState();
         }
         return base.HandleInput(p);
 
