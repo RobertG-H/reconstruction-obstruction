@@ -36,7 +36,7 @@ public class IdleState : GroundedState
 
     public override void StateEnter(PlayerController p)
     {
-        // p.ResetStates();
-        // p.anim.SetBool("idle", true);
+        p.ResetStates();
+        p.anim.SetBool("idle", true);
     }
 }

@@ -21,4 +21,10 @@ public class GroundPoundState : FallingState
         p.body.velocity += new Vector2(0, p.GPSPEED * Time.deltaTime);
         return base.Update(p);
     }
+
+    public override void StateEnter(PlayerController p)
+    {
+        p.ResetStates();
+        p.anim.SetBool("groundpound", true);
+    }
 }

@@ -417,10 +417,10 @@ MonoBehaviour:
   body: {fileID: 0}
   anim: {fileID: 0}
   ACCELSLOWDOWN: 120
-  ACCELX: 100
+  ACCELX: 180
   STOPTHRESH: 1
   SLOWDOWNTHRES: 2
-  ABSMAXSPEEDX: 20
+  ABSMAXSPEEDX: 30
   currentMaxSpeedX: 0
   AIRACCELX: 15
   ARCFORCEX: 18

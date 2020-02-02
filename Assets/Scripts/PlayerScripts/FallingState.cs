@@ -16,6 +16,7 @@ public class FallingState : AerialState
         if (p.RayCastGround())
         {
             // p.cameraController.Shake(0.9f, 0.4f);
+
             p.currentFallMultiplier = p.NORMALFALLMULTIPLIER;
             if (Mathf.Abs(p.iHorz) > 0)
             {
