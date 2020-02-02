@@ -24,7 +24,7 @@ public class NailController : MonoBehaviour
 
     public GameObject house;
     private FortSounds fortSounds;
- 
+    private bool initialHit = false;
 
 
     public delegate void NailHit();
@@ -43,14 +43,14 @@ public class NailController : MonoBehaviour
 
     void Start()
     {
-        startPosition = transform.position;
+        startPosition = transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (isHit) return;
-        if (transform.position == endpoint.position)
+        if (transform.localPosition == endpoint.localPosition)
         {
             particleSystem.Stop();
             isHit = true;
@@ -62,26 +62,33 @@ public class NailController : MonoBehaviour
         {
             //check flag
             weight += Time.deltaTime * moveSpeed; //amount
-            transform.position = Vector3.Lerp(startPosition, endpoint.position, weight);
+            transform.localPosition = Vector3.Lerp(startPosition, endpoint.localPosition, weight);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             if (other.gameObject.GetComponent<PlayerController>().CheckHitting())
             {
-                Debug.Log("PLAYER NAIL HIT");
-                if(!isHit)
+                if (!initialHit)
                 {
-                    nailSound1.PlaySound("nail");
+                    initialHit = true;
+                    Debug.Log("PLAYER NAIL HIT");
+                    if (!isHit)
+                    {
+                        nailSound1.PlaySound("nail");
+                        nailHit();
+                    }
                 }
-                nailHit();
+
             }
 
         }
     }
+
+
 
     void nailHit()
     {

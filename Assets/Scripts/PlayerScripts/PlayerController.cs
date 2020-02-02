@@ -183,7 +183,11 @@ public class PlayerController : EntityController
 
     public bool CheckHitting()
     {
-        return isHitting;
+        if (anim.GetCurrentAnimatorClipInfo(0)[0].clip.name == "RatSpin" || anim.GetCurrentAnimatorClipInfo(0)[0].clip.name == "RatDrop" || anim.GetCurrentAnimatorClipInfo(0)[0].clip.name == "RatSlam")
+        {
+            return true;
+        }
+        return false;
     }
 
     private void ResetFlash()

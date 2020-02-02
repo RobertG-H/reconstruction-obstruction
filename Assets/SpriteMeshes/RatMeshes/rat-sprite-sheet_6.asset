@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: rat-sprite-sheet_6
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: -271549192838725720, guid: 2a2e7316a5f73d74a9c6e47f1ab49518,
-    type: 3}
+  m_Sprite: {fileID: 21300012, guid: 2a2e7316a5f73d74a9c6e47f1ab49518, type: 3}
   m_SharedMesh: {fileID: 9072276803930451996}
   m_SharedMaterials: []
 --- !u!114 &7641194027201283080

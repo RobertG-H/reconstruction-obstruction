@@ -313,7 +313,6 @@ MonoBehaviour:
   m_Name: Cannon
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: 5950723946469374900, guid: 4abaef119c81380448f49ef0fe239c34,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4abaef119c81380448f49ef0fe239c34, type: 3}
   m_SharedMesh: {fileID: -4720348635613318408}
   m_SharedMaterials: []

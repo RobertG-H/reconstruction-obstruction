@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Pile Bunker Stick
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: -563678932864547825, guid: 4abaef119c81380448f49ef0fe239c34,
-    type: 3}
+  m_Sprite: {fileID: 21300028, guid: 4abaef119c81380448f49ef0fe239c34, type: 3}
   m_SharedMesh: {fileID: 3951465882618315219}
   m_SharedMaterials: []
 --- !u!114 &3876845839306839159

@@ -811,7 +811,6 @@ MonoBehaviour:
   m_Name: Leg R
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: 6226195627903215690, guid: 4abaef119c81380448f49ef0fe239c34,
-    type: 3}
+  m_Sprite: {fileID: 21300034, guid: 4abaef119c81380448f49ef0fe239c34, type: 3}
   m_SharedMesh: {fileID: -8386800606815703010}
   m_SharedMaterials: []

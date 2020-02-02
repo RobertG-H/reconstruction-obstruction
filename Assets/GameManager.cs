@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject player;
+    public MusicController musicController;
     public NailController[] nails;
 
     public FinalNail finalNail;
+
+    public FirstNail firstNail;
     public GameObject[] pauseUI;
 
     public int totalHitNails = 0;
@@ -23,6 +26,7 @@ public class GameManager : MonoBehaviour
         PlayerController.OnPlayerDeath += GameOver;
         NailController.OnNailHit += NailHit;
         FinalNail.OnFinalNailHit += GameWon;
+        FirstNail.OnFirstNailHit += StartGame;
 
     }
 
@@ -31,10 +35,17 @@ public class GameManager : MonoBehaviour
         PlayerController.OnPlayerDeath -= GameOver;
         NailController.OnNailHit -= NailHit;
         FinalNail.OnFinalNailHit -= GameWon;
+        FirstNail.OnFirstNailHit -= StartGame;
+
     }
     void Start()
     {
         Time.timeScale = 1;
+    }
+
+    void StartGame()
+    {
+        musicController.StartMainSong();
     }
 
     void GameOver()

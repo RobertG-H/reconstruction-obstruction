@@ -194,8 +194,7 @@ MonoBehaviour:
   m_Name: Pipe 2
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: -8668472816854172142, guid: 4abaef119c81380448f49ef0fe239c34,
-    type: 3}
+  m_Sprite: {fileID: 21300008, guid: 4abaef119c81380448f49ef0fe239c34, type: 3}
   m_SharedMesh: {fileID: -7355083665133467830}
   m_SharedMaterials: []
 --- !u!114 &4809231330272313509
