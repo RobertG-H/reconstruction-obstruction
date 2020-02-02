@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/YetiIntro.unity
+    guid: ad298a1ef68ac214e82379babbd9784e
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: a411923f682069e49b292f6dff9a2135
   - enabled: 1

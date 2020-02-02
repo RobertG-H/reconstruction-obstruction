@@ -20,7 +20,6 @@ public class GameOverManager : MonoBehaviour
     }
     void Update()
     {
-
         CheckReset();
     }
 
