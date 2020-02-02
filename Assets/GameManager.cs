@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject player;
+
     public MusicController musicController;
     public NailController[] nails;
 
@@ -40,6 +42,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+
         Time.timeScale = 1;
     }
 
@@ -52,7 +55,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GAME OVER");
         gameEnded = true;
+        SceneManager.LoadScene(2);
         Time.timeScale = 0;
+        // gameOverScreen.color = new Color(1, 1, 1, 1);
     }
 
     void NailHit()
@@ -68,6 +73,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("YOU WINIININININININININI");
         gameEnded = true;
+        SceneManager.LoadScene(3);
+
         Time.timeScale = 0;
     }
 
