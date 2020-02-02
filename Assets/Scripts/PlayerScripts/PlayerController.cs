@@ -36,6 +36,10 @@ public class PlayerController : EntityController
 
     private bool arcCancelled = false;
 
+    public bool isHitting = false;
+
+    public bool isGroundPounding = false;
+
     // DELEGATES AND EVENTS
     public delegate void PlayerDeath();
     public static event PlayerDeath OnPlayerDeath;
@@ -66,6 +70,7 @@ public class PlayerController : EntityController
     }
     void Update()
     {
+        Debug.Log(state.ToString());
         RayCastGround();
         CheckNewState(state.Update(this));
     }
@@ -98,6 +103,7 @@ public class PlayerController : EntityController
     public void OnGroundPoundPressed(InputAction.CallbackContext context)
     {
         currentFallMultiplier = NORMALFALLMULTIPLIER * 10;
+        isGroundPounding = true;
         iGroundPoundPressed = true;
         HandleInput();
         iGroundPoundPressed = false;
@@ -139,8 +145,13 @@ public class PlayerController : EntityController
     {
         HEALTH -= damage;
         healthBar.UpdateHealth(HEALTH, MAXHEALTH);
-        Debug.Log(HEALTH);
+        // Debug.Log(HEALTH);
         if (HEALTH <= 0)
             OnPlayerDeath();
+    }
+
+    public bool CheckHitting()
+    {
+        return isHitting;
     }
 }

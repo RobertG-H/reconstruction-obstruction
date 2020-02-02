@@ -12,10 +12,14 @@ public class FallingState : AerialState
 
     public override PlayerState Update(PlayerController p)
     {
-        Debug.Log("Falling");
+        // Debug.Log("Falling");
         if (p.RayCastGround())
         {
-            // p.cameraController.Shake(0.9f, 0.4f);
+            if (p.isGroundPounding)
+            {
+                p.cameraController.Shake(0.4f, 0.4f);
+                p.isGroundPounding = false;
+            }
 
             p.currentFallMultiplier = p.NORMALFALLMULTIPLIER;
             if (Mathf.Abs(p.iHorz) > 0)
@@ -30,7 +34,7 @@ public class FallingState : AerialState
         else
         {
             p.body.velocity += Vector2.up * Physics2D.gravity.y * p.currentFallMultiplier * Time.deltaTime;
-            Debug.Log(string.Format("current fall: {0}", p.currentFallMultiplier));
+            // Debug.Log(string.Format("current fall: {0}", p.currentFallMultiplier));
         }
         return base.Update(p);
     }
