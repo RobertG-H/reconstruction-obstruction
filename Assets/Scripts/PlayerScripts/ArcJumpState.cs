@@ -37,7 +37,7 @@ public class ArcJumpState : AerialState
 
     public override PlayerState Update(PlayerController p)
     {
-        Debug.Log("ArcJump");
+        // Debug.Log("ArcJump");
 
         //Run once
         if (entered)
@@ -53,7 +53,7 @@ public class ArcJumpState : AerialState
 
     public override void StateEnter(PlayerController p)
     {
-        // p.ResetStates();
-        // p.anim.SetBool("jumping", true);
+        p.ResetStates();
+        p.anim.SetBool("slamming", true);
     }
 }

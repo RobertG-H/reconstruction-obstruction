@@ -10,6 +10,12 @@ public class PlayerController : EntityController
     public ArcRenderer arcRenderer;
 
     public CameraController cameraController;
+
+    public HealthBarController healthBar;
+
+    public float HEALTH;
+    public float MAXHEALTH;
+
     [HideInInspector]
     public float iHorz;
     [HideInInspector]
@@ -30,16 +36,24 @@ public class PlayerController : EntityController
 
     private bool arcCancelled = false;
 
+    public bool isHitting = false;
+
+    public bool isGroundPounding = false;
+
+    // DELEGATES AND EVENTS
+    public delegate void PlayerDeath();
+    public static event PlayerDeath OnPlayerDeath;
+
     // Start is called before the first frame update
     public override void Start()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         state = new IdleState();
-        // AnimationClip[] clips = anim.runtimeAnimatorController.animationClips;
-        // foreach(AnimationClip clip in clips)
+        AnimationClip[] clips = anim.runtimeAnimatorController.animationClips;
+        // foreach (AnimationClip clip in clips)
         // {
-        //     switch(clip.name)
+        //     switch (clip.name)
         //     {
         //         case "Slash":
         //             attackDurations[clip.name] = clip.length;
@@ -56,6 +70,8 @@ public class PlayerController : EntityController
     }
     void Update()
     {
+        // Debug.Log(state.ToString());
+        RayCastGround();
         CheckNewState(state.Update(this));
     }
 
@@ -77,7 +93,6 @@ public class PlayerController : EntityController
         state = newState;
         state.StateEnter(this);
     }
-
     // TODO remove entityinput and playerinput classes
     public void OnHorizontal(InputAction.CallbackContext context)
     {
@@ -88,6 +103,7 @@ public class PlayerController : EntityController
     public void OnGroundPoundPressed(InputAction.CallbackContext context)
     {
         currentFallMultiplier = NORMALFALLMULTIPLIER * 10;
+        isGroundPounding = true;
         iGroundPoundPressed = true;
         HandleInput();
         iGroundPoundPressed = false;
@@ -100,6 +116,7 @@ public class PlayerController : EntityController
         {
             currentMaxSpeedX /= 2.5f;
             arcRenderer.isCharging = true;
+            cameraController.Zoom(40f, MAXARCDURATION - 0.2f);
             iArcPressed = true;
             HandleInput();
             iArcPressed = false;
@@ -109,6 +126,7 @@ public class PlayerController : EntityController
         {
             currentMaxSpeedX = ABSMAXSPEEDX;
             arcRenderer.isCharging = false;
+            cameraController.ZoomReset();
             iArcReleased = true;
             iArcPressDuration = Mathf.Min((float)context.duration, MAXARCDURATION);
             HandleInput();
@@ -121,5 +139,19 @@ public class PlayerController : EntityController
     {
         arcRenderer.isCharging = false;
         arcCancelled = true;
+    }
+
+    public void TakeHit(Vector3 otherPos, float damage, float knockback)
+    {
+        HEALTH -= damage;
+        healthBar.UpdateHealth(HEALTH, MAXHEALTH);
+        // Debug.Log(HEALTH);
+        if (HEALTH <= 0)
+            OnPlayerDeath();
+    }
+
+    public bool CheckHitting()
+    {
+        return isHitting;
     }
 }

@@ -41,6 +41,9 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(string.Format("iHorz: {0}", iHorz));
+
+        RayCastDirection();
         CheckNewState(state.Update(this));
     }
 
@@ -92,6 +95,8 @@ public class EnemyController : MonoBehaviour
         }
 
         int layerMask = 1 << LayerMask.NameToLayer("Ignore Raycast");
+        int layerMask2 = 1 << LayerMask.NameToLayer("Fort");
+        layerMask += layerMask2;
         layerMask = ~layerMask;
         Vector3 currentPos = transform.position;
 
@@ -108,6 +113,16 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    public void ResetStates()
+    {
+        foreach (AnimatorControllerParameter param in anim.parameters)
+        {
+            if (param.type == AnimatorControllerParameterType.Bool)
+            {
+                anim.SetBool(param.name, false);
+            }
+        }
+    }
     public void OnHorizontal(InputAction.CallbackContext context)
     {
         HandleHorizontal(context.ReadValue<float>());

@@ -17,6 +17,7 @@ public class AerialState : PlayerState
 
     public override PlayerState Update(PlayerController p)
     {
+        p.isHitting = true;
         if (Mathf.Abs(p.iHorz) > 0)
         {
             p.body.AddForce(p.transform.right * Mathf.Sign(p.iHorz) * p.AIRACCELX);
@@ -25,11 +26,11 @@ public class AerialState : PlayerState
             //     p.body.velocity = new Vector2(p.AIRMAXSPEEDX * Mathf.Sign(p.body.velocity.x), p.body.velocity.y);
             // }
         }
-        if (p.body.velocity.y < 0)
+        if (p.body.velocity.y <= 0)
         {
             return new FallingState();
         }
-        else if (p.body.velocity.y >= 0)
+        else if (p.body.velocity.y > 0)
         {
             return new UpwardsAerialState();
         }
@@ -39,6 +40,12 @@ public class AerialState : PlayerState
     public override string GetBaseStateID()
     {
         return "AerialState";
+    }
+
+    public override void StateEnter(PlayerController p)
+    {
+        // p.ResetStates();
+        // p.anim.SetBool("movingUp", true);
     }
 
 }

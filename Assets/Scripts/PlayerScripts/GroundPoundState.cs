@@ -12,7 +12,7 @@ public class GroundPoundState : FallingState
 
     public override PlayerState Update(PlayerController p)
     {
-        Debug.Log("Ground Pound");
+        // Debug.Log("Ground Pound");
         if (entered)
         {
             entered = false;
@@ -20,5 +20,11 @@ public class GroundPoundState : FallingState
         }
         p.body.velocity += new Vector2(0, p.GPSPEED * Time.deltaTime);
         return base.Update(p);
+    }
+
+    public override void StateEnter(PlayerController p)
+    {
+        p.ResetStates();
+        p.anim.SetBool("groundpound", true);
     }
 }

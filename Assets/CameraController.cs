@@ -17,6 +17,9 @@ public class CameraController : MonoBehaviour
     private float shakeIntensity = 0f;
     private float shakeDuration = 0f;
     Vector3 originalPosition;
+
+    float ORIGINALZOOM;
+    float ORIGINALY;
     private Transform camTransform;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,8 @@ public class CameraController : MonoBehaviour
             camTransform = GetComponent(typeof(Transform)) as Transform;
         }
         originalPosition = camTransform.localPosition;
+        ORIGINALZOOM = cam.orthographicSize;
+        ORIGINALY = cam.transform.localPosition.y;
         // Zoom(-5f, 10f);
         // Shake(0.1f, 5f);
 
@@ -58,21 +63,44 @@ public class CameraController : MonoBehaviour
     public void Zoom(float zoomDelta, float setDuration)
     {
         zoomState = 1;
-        zoomInput = cam.transform.position.z + zoomDelta;
+        zoomInput = cam.orthographicSize + zoomDelta;
         zoomDuration = setDuration;
+
+    }
+
+    public void ZoomReset()
+    {
+        zoomState = 2;
+        zoomInput = ORIGINALZOOM;
+        zoomDuration = 0.7f;
     }
 
     void ZoomChange()
     {
-        Debug.Log(zoomInput);
-        Debug.Log(cam.transform.position.z);
-        if (Mathf.Abs(zoomInput - cam.transform.position.z) > 0.01f)
+        if (Mathf.Abs(zoomInput - cam.orthographicSize) > 0.1f)
         {
             camTransform.localPosition = originalPosition; //resets to original position so that zoom functions with shake
-            float newSize = Mathf.SmoothDamp(cam.transform.position.z, zoomInput, ref velocity, zoomDuration);
-            float CamX = cam.transform.position.x;
-            float CamY = transform.position.y;
-            cam.transform.position = new Vector3(CamX, CamY, newSize);
+            float newSize = Mathf.SmoothDamp(cam.orthographicSize, zoomInput, ref velocity, zoomDuration);
+            cam.orthographicSize = newSize;
+            float newHeight = Mathf.SmoothDamp(camTransform.localPosition.y, ORIGINALY + 20.0f, ref velocity, zoomDuration);
+            cam.transform.localPosition = new Vector3(0, newHeight, -40);
+            originalPosition = camTransform.localPosition;
+        }
+        else
+        {
+            zoomState = 0;
+        }
+    }
+
+    void ZoomChangeReset()
+    {
+        if (Mathf.Abs(zoomInput - cam.orthographicSize) > 0.1f)
+        {
+            camTransform.localPosition = originalPosition; //resets to original position so that zoom functions with shake
+            float newSize = Mathf.SmoothDamp(cam.orthographicSize, zoomInput, ref velocity, zoomDuration);
+            cam.orthographicSize = newSize;
+            float newHeight = Mathf.SmoothDamp(camTransform.localPosition.y, ORIGINALY, ref velocity, zoomDuration);
+            cam.transform.localPosition = new Vector3(0, newHeight, -40);
             originalPosition = camTransform.localPosition;
         }
         else
@@ -88,6 +116,10 @@ public class CameraController : MonoBehaviour
     {
         //Set update zoom level based on current trajectory of the hammer
         //Zoom(player.)
+        if (zoomState == 2)
+        {
+            ZoomChangeReset();
+        }
         if (zoomState == 1)
         {
             ZoomChange();

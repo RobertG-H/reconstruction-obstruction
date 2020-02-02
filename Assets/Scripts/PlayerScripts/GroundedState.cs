@@ -20,6 +20,8 @@ public class GroundedState : MovingState
 
     public override PlayerState Update(PlayerController p)
     {
+        p.isHitting = false;
+
         return base.Update(p);
     }
 
