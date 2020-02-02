@@ -108,6 +108,16 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    public void ResetStates()
+    {
+        foreach(AnimatorControllerParameter param in anim.parameters)
+        {
+        	if(param.type == AnimatorControllerParameterType.Bool)
+        	{
+        		anim.SetBool(param.name, false);
+        	}
+        }
+    }
     public void OnHorizontal(InputAction.CallbackContext context)
     {
         HandleHorizontal(context.ReadValue<float>());
