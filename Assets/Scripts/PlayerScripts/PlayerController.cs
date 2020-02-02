@@ -90,7 +90,7 @@ public class PlayerController : EntityController
     }
     void Update()
     {
-        // Debug.Log(state.ToString());
+        Debug.Log(state.ToString());
         RayCastGround();
         CheckNewState(state.Update(this));
     }
@@ -131,27 +131,31 @@ public class PlayerController : EntityController
 
     public void OnArcPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Arc pressed");
-        if (context.started)
+        if(state.GetBaseStateID() != "AerialState")
         {
-            currentMaxSpeedX /= 2.5f;
-            arcRenderer.isCharging = true;
-            cameraController.Zoom(40f, MAXARCDURATION - 0.2f);
-            iArcPressed = true;
-            HandleInput();
-            iArcPressed = false;
-            arcCancelled = false;
+            Debug.Log("Arc pressed");
+            if (context.started)
+            {
+                currentMaxSpeedX /= 2.5f;
+                arcRenderer.isCharging = true;
+                cameraController.Zoom(40f, MAXARCDURATION - 0.2f);
+                iArcPressed = true;
+                HandleInput();
+                iArcPressed = false;
+                arcCancelled = false;
+            }
+            else if (!arcCancelled)
+            {
+                currentMaxSpeedX = ABSMAXSPEEDX;
+                arcRenderer.isCharging = false;
+                cameraController.ZoomReset();
+                iArcReleased = true;
+                iArcPressDuration = Mathf.Min((float)context.duration, MAXARCDURATION);
+                HandleInput();
+                iArcReleased = false;
+            }
         }
-        else if (!arcCancelled)
-        {
-            currentMaxSpeedX = ABSMAXSPEEDX;
-            arcRenderer.isCharging = false;
-            cameraController.ZoomReset();
-            iArcReleased = true;
-            iArcPressDuration = Mathf.Min((float)context.duration, MAXARCDURATION);
-            HandleInput();
-            iArcReleased = false;
-        }
+
 
     }
 

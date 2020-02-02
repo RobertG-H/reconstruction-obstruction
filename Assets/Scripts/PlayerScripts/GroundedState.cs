@@ -6,6 +6,7 @@ public class GroundedState : MovingState
 {
     public override PlayerState HandleInput(PlayerController p)
     {
+        base.HandleInput(p);
         if (!p.RayCastGround())
         {
             return new FallingState();
@@ -14,7 +15,7 @@ public class GroundedState : MovingState
         {
             return new ChargingState();
         }
-        return base.HandleInput(p);
+        return null;
 
     }
 

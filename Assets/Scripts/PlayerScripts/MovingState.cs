@@ -7,12 +7,14 @@ public class MovingState : PlayerState
 {
     public override PlayerState HandleInput(PlayerController p)
     {
-        p.CheckFlip(p.iHorz);
+        // p.CheckFlip(p.iHorz);
         return null;
+        // return null;
     }
 
     public override PlayerState Update(PlayerController p)
     {
+        p.CheckFlip(p.iHorz);
         //Do nothing
         if (Mathf.Abs(p.iHorz) > 0)
         {

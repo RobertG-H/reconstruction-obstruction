@@ -36,7 +36,7 @@ public class AttackController : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("PLAYER IT");
-
+            Debug.Log("DAMAGE: " + damage);
             other.gameObject.GetComponent<PlayerController>().TakeHit(transform.position, damage, knockback);
         }
     }
