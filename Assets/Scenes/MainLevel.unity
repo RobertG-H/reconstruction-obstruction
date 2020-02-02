@@ -163,6 +163,19 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2091036279, guid: b71e1c40e24ca7b498b0183c1a05381f, type: 3}
+      propertyPath: HEALTH
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091036279, guid: b71e1c40e24ca7b498b0183c1a05381f, type: 3}
+      propertyPath: MAXHEALTH
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464145813046169694, guid: b71e1c40e24ca7b498b0183c1a05381f,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.12
+      objectReference: {fileID: 0}
     - target: {fileID: 6099693177153548150, guid: b71e1c40e24ca7b498b0183c1a05381f,
         type: 3}
       propertyPath: m_Mesh
@@ -221,7 +234,7 @@ PrefabInstance:
     - target: {fileID: 6099693177842590639, guid: b71e1c40e24ca7b498b0183c1a05381f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -58.3
+      value: -67.8
       objectReference: {fileID: 0}
     - target: {fileID: 6099693177842590639, guid: b71e1c40e24ca7b498b0183c1a05381f,
         type: 3}

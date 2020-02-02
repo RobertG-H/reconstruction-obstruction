@@ -30,6 +30,30 @@ public class NailController : MonoBehaviour
     public delegate void NailHit();
     public static event NailHit OnNailHit;
 
+    public bool isFirstNail = false;
+    private bool canHit = false;
+
+
+    void OnEnable()
+    {
+        FirstNail.OnFirstNailHit += EnableNail;
+
+    }
+
+    void OnDisable()
+    {
+        FirstNail.OnFirstNailHit -= EnableNail;
+
+    }
+
+    void EnableNail()
+    {
+        if (!isFirstNail)
+        {
+            canHit = true;
+            particleSystem.Play();
+        }
+    }
     // Start is called before the first frame update
     void Awake()
     {
@@ -39,6 +63,16 @@ public class NailController : MonoBehaviour
         fortSounds = house.GetComponent<FortSounds>();
 
         particleSystem = GetComponent<ParticleSystem>();
+
+        if (isFirstNail)
+        {
+            canHit = true;
+        }
+        else
+        {
+            particleSystem.Stop();
+        }
+
     }
 
     void Start()
@@ -72,16 +106,20 @@ public class NailController : MonoBehaviour
         {
             if (other.gameObject.GetComponent<PlayerController>().CheckHitting())
             {
-                if (!initialHit)
+                if (canHit)
                 {
-                    initialHit = true;
-                    Debug.Log("PLAYER NAIL HIT");
-                    if (!isHit)
+                    if (!initialHit)
                     {
-                        nailSound1.PlaySound("nail");
-                        nailHit();
+                        initialHit = true;
+                        Debug.Log("PLAYER NAIL HIT");
+                        if (!isHit)
+                        {
+                            nailSound1.PlaySound("nail");
+                            nailHit();
+                        }
                     }
                 }
+
 
             }
 

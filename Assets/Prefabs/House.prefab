@@ -2649,7 +2649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2.2070878
+  m_Length: 2.2070882
   m_ChildTransform: {fileID: 8592336300001035225}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &8592336300146859412
@@ -2734,12 +2734,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8592336300146859412}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 822b575253b52a649892afdfb6f57b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 0
   spriteRenderers:
   - {fileID: 8592336300528498801}
   - {fileID: 8592336300038970984}
@@ -2753,6 +2753,7 @@ MonoBehaviour:
   projDisplacement: 10
   projFloor: 68
   deleteAfter: 5
+  spawnLocation: {fileID: 0}
 --- !u!1 &8592336300179845238
 GameObject:
   m_ObjectHideFlags: 0
@@ -2884,6 +2885,7 @@ GameObject:
   - component: {fileID: 8592336300398547951}
   - component: {fileID: 1516293470}
   - component: {fileID: 1516293471}
+  - component: {fileID: 7337756452311983376}
   m_Layer: 2
   m_Name: PileBunkerBicepBone
   m_TagString: Untagged
@@ -2919,7 +2921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 3.0131469
+  m_Length: 3.013147
   m_ChildTransform: {fileID: 8592336299667166079}
   m_AttachedIK: {fileID: 0}
 --- !u!95 &8592336300398547951
@@ -3052,6 +3054,33 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 8c4686e8a53ffff418dac9264246f080, type: 3}
   audioPlayer: {fileID: 1516293470}
+--- !u!114 &7337756452311983376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8592336300398547949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822b575253b52a649892afdfb6f57b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  spriteRenderers:
+  - {fileID: 8592336300528498801}
+  - {fileID: 8592336300038970984}
+  - {fileID: 8592336301129165202}
+  animator: {fileID: 8592336300398547951}
+  isActive: 0
+  piledriverProjectiles:
+  - {fileID: 625564713513014549, guid: ba9b6d1c78b413342afe4c24a0dcc7b1, type: 3}
+  - {fileID: 6141190518877240676, guid: 1fa99a411fcc01649a26b3d47b2c9805, type: 3}
+  projectileForce: 30
+  projDisplacement: 10
+  projFloor: 68
+  deleteAfter: 5
+  spawnLocation: {fileID: 8592336300146859415}
 --- !u!1 &8592336300528498804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3455,7 +3484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2.030807
+  m_Length: 2.0308075
   m_ChildTransform: {fileID: 8592336300096217371}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &8592336300695928621
@@ -4314,7 +4343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2.4276187
+  m_Length: 2.4276183
   m_ChildTransform: {fileID: 8592336301015324563}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &8592336301015324560
@@ -5294,6 +5323,11 @@ PrefabInstance:
       propertyPath: house
       value: 
       objectReference: {fileID: 8592336300934343451}
+    - target: {fileID: 4215440694954603176, guid: 8608e69c984d5e74f9d4e1224eda5623,
+        type: 3}
+      propertyPath: isFirstNail
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8792916546820630077, guid: 8608e69c984d5e74f9d4e1224eda5623,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5376,15 +5410,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8608e69c984d5e74f9d4e1224eda5623, type: 3}
---- !u!1 &1809209055717006247 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1809209054418507712, guid: 8608e69c984d5e74f9d4e1224eda5623,
-    type: 3}
-  m_PrefabInstance: {fileID: 1466403943}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8792916546590243992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8792916547951522047, guid: 8608e69c984d5e74f9d4e1224eda5623,
+    type: 3}
+  m_PrefabInstance: {fileID: 1466403943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1809209055717006247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1809209054418507712, guid: 8608e69c984d5e74f9d4e1224eda5623,
     type: 3}
   m_PrefabInstance: {fileID: 1466403943}
   m_PrefabAsset: {fileID: 0}
@@ -5615,6 +5649,11 @@ PrefabInstance:
       propertyPath: house
       value: 
       objectReference: {fileID: 8592336300934343451}
+    - target: {fileID: 4215440694954603176, guid: 8608e69c984d5e74f9d4e1224eda5623,
+        type: 3}
+      propertyPath: isFirstNail
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8792916546820630077, guid: 8608e69c984d5e74f9d4e1224eda5623,
         type: 3}
       propertyPath: m_LocalPosition.y

@@ -28,7 +28,7 @@ public class Fixable : AttackController
     {
 
     }
-    public void repair()
+    public virtual void repair()
     {
         base.SetDamage(1);
 
