@@ -37,7 +37,7 @@ public class ArcJumpState : AerialState
 
     public override PlayerState Update(PlayerController p)
     {
-        Debug.Log("ArcJump");
+        // Debug.Log("ArcJump");
 
         //Run once
         if (entered)

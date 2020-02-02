@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCannon : MonoBehaviour
+public class EnemyCannon : Fixable
 {
     // cannon 
     public Transform cannonBoneTransform;
@@ -26,14 +26,9 @@ public class EnemyCannon : MonoBehaviour
     public Transform ratTransform;
 
 
-    void Start()
-    {
-        // :) 
-    }
-
-
     void Update()
     {
+        if (!isActive) return;
         Vector3 direction = ratTransform.position - cannonBoneTransform.position; // direction bullet is fired 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // angle between cannon and rat 
         Quaternion rotation = Quaternion.AngleAxis(angle + deltaAngle, Vector3.forward);

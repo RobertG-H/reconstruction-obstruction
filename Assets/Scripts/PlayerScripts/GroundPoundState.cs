@@ -12,7 +12,7 @@ public class GroundPoundState : FallingState
 
     public override PlayerState Update(PlayerController p)
     {
-        Debug.Log("Ground Pound");
+        // Debug.Log("Ground Pound");
         if (entered)
         {
             entered = false;
