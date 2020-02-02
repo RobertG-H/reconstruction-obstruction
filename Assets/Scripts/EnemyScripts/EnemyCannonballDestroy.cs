@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class EnemyCannonballDestroy : MonoBehaviour
 {
-    public float timeoutDestructor = 1.5f;
-    public GameObject cannonballInstance; 
+    public float timeoutDestructor = 2.5f;
+    public GameObject bulletInstance; 
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(cannonballInstance, timeoutDestructor); 
+        Destroy(bulletInstance, timeoutDestructor); ; 
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        Destroy(cannonballInstance); 
+        Destroy(bulletInstance); 
     }
 }
