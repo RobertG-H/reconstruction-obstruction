@@ -269,6 +269,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 713110054}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &713110056 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6099693177842590639, guid: b71e1c40e24ca7b498b0183c1a05381f,
+    type: 3}
+  m_PrefabInstance: {fileID: 713110054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1054893510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 61023858459179363, guid: e07d565a6fbdc224bac6bcca94ca9939,
@@ -522,6 +528,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5382909269281140197, guid: e07d565a6fbdc224bac6bcca94ca9939,
+        type: 3}
+      propertyPath: ratTransform
+      value: 
+      objectReference: {fileID: 713110056}
+    - target: {fileID: 5382909269281140197, guid: e07d565a6fbdc224bac6bcca94ca9939,
+        type: 3}
+      propertyPath: timeHorFlying
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382909269281140197, guid: e07d565a6fbdc224bac6bcca94ca9939,
+        type: 3}
+      propertyPath: timeVerFlying
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8592336299070199601, guid: e07d565a6fbdc224bac6bcca94ca9939,
         type: 3}
       propertyPath: m_Mesh
@@ -661,16 +682,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8592336300934343654, guid: e07d565a6fbdc224bac6bcca94ca9939,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8592336300934343654, guid: e07d565a6fbdc224bac6bcca94ca9939,
-        type: 3}
-      propertyPath: m_Mass
-      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8592336301129165203, guid: e07d565a6fbdc224bac6bcca94ca9939,
         type: 3}
